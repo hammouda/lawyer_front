@@ -13,7 +13,7 @@ function Header() {
                 <Link to={"/"}>About us</Link>
                 <Link to={"/"}>Our services</Link>
                 <Link to={"/"}>blog</Link>
-                <Link to={"/"}>contact us</Link>
+                <Link to={"/contact"}>contact us</Link>
                 <Link to={"/"}>en</Link>
             </div>
             <button className='rounded-full bg-primary text-white py-3 px-4 flex gap-x-4 items-center'>
