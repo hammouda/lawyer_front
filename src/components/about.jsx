@@ -2,7 +2,10 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='bg-blue-light py-16'>
+    <div className='bg-blue-light py-16 relative'>
+      <div className="hidden md:block absolute right-0 top-0 z-10">
+        <img src="/images/overlay.png" className='w-80' alt="" />
+      </div>
       <div className="flex px-4 md:px-16 justify-between flex-wrap">
         <p className="text-xl lg:text-4xl text-blue-dark font-semibold mb-4 md:mb-0">
           Learn More About <br/>Our Firm's Journey and Values
@@ -13,7 +16,7 @@ function About() {
       </div>
       <div className="grid mt-14 md:grid-cols-2 px-4 md:px-16 md:gap-x-10 lg:gap-x-28">
         <div className="w-full mb-4 md:mb-0">
-          <video className='w-64 md:w-full rounded-2xl' controls>
+          <video className='w-full rounded-2xl' controls>
             <source src='/videos/firm-promo.mp4' type='video/mp4' />
           </video>
         </div>
