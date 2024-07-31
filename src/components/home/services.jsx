@@ -15,7 +15,7 @@ function Services() {
             <p className='text-sm'>Schedule Free Consultation</p>
         </button>
       </div>
-      <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24">
+      <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24 justify-center">
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
             <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
