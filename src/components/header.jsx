@@ -11,7 +11,7 @@ function Header() {
                 <Link to={"/"}>Home</Link>
                 <Link to={"/"}>About us</Link>
                 <Link to={"/"}>Our services</Link>
-                <Link to={"/"}>blog</Link>
+                <Link to={"/articles"}>blog</Link>
                 <Link to={"/contact"}>contact us</Link>
                 <Link to={"/"}>en</Link>
             </div>
