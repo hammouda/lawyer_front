@@ -1,10 +1,10 @@
 import ArticleWriter from "../components/ArticleWriter";
+import Menu from "../components/menu";
 import RelevantArticles from "../components/RelevantArticles";
-import Header from '../components/header'
 
 function Article() {
     return(<>
-    <Header/>
+    <Menu/>
         <div className="grid grid-cols-5 gap-4 w-90">
             <div className="col-span-1 ">
                 <ArticleWriter/>

@@ -1,9 +1,10 @@
-import Header from "../components/header";
+import Menu from "../components/menu";
+
 
 function Articles() {
     return(
         <>
-            <Header/>
+            <Menu/>
             <div className="w-100 text-black text-[40px] font-bold font-['Roboto']">Mithaq Al Tashrie: Article collection</div>
             <div className="w-100 grid grid-cols-4 gap-1">
                 <div className="grid-span-3">
