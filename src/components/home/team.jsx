@@ -9,7 +9,7 @@ function Team() {
         </div>
         <img src="/images/team-0.png" className='w-full rounded-2xl' alt="" />
         <div className="mt-16 lg:pr-20">
-            <div className="flex w-full justify-between items-center">
+            <div className="flex w-full justify-between items-center flex-wrap gap-y-4 md:gap-y-0">
                 <p className='text-white text-4xl font-medium'>Meet Our Team</p>
                 <Link to={"/"} className='rounded-full border border-white px-7 py-3 text-center text-lg font-bold text-white'>
                     See More Team
@@ -18,7 +18,7 @@ function Team() {
             <p className="mt-5 text-white w-full text-justify">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, et. Nobis laborum minima, enim quis sint quasi recusandae nihil quod, consequatur atque ea. Deserunt nemo itaque odio nostrum, adipisci unde.
             </p>
-            <div className="mt-11 flex gap-x-5 z-50">
+            <div className="mt-11 flex flex-wrap gap-5 z-50">
                 <div className='w-fit h-72 rounded-2xl relative bg-secondary'>
                     <img src="/images/team-1.png" className='h-72 rounded-2xl opacity-70' alt="" />
                     <div className="absolute bottom-2 w-full">
