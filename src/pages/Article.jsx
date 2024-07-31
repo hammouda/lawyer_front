@@ -2,9 +2,11 @@ import ArticleWriter from "../components/ArticleWriter";
 import Menu from "../components/menu";
 import RelevantArticles from "../components/RelevantArticles";
 
+
 function Article() {
     return(<>
     <Menu/>
+
         <div className="grid grid-cols-5 gap-4 w-90">
             <div className="col-span-1 ">
                 <ArticleWriter/>
