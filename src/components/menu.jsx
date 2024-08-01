@@ -7,15 +7,15 @@ function Menu() {
     <div className='bg-secondary px-4 md:px-16'>
         <div className="flex justify-between items-center py-6">
             <img src="/logo.png" className='w-24' alt="" />
-            <div className="hidden md:flex gap-x-10 text-white text-sm font-semibold items-center uppercase">
+            <div className="hidden md:flex gap-x-10 text-white text-sm font-semibold items-center uppercase z-50">
                 <Link to={"/"}>Home</Link>
-                <Link to={"/"}>About us</Link>
-                <Link to={"/"}>Our services</Link>
+                <Link to={"/about"}>About us</Link>
+                <Link to={"/services"}>Our services</Link>
                 <Link to={"/"}>blog</Link>
                 <Link to={"/contact"}>contact us</Link>
                 <Link to={"/"}>en</Link>
             </div>
-            <button className='rounded-full bg-primary text-white py-3 px-4 hidden md:flex gap-x-4 items-center'>
+            <button className='rounded-full bg-primary text-white py-3 px-4 hidden md:flex gap-x-4 items-center z-50'>
                 <CalendarDaysIcon className='w-5 h-5' />
                 <p className='text-sm'>Schdule Free Consultation</p>
             </button>

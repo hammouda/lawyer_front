@@ -1,0 +1,8 @@
+.slick-dots li button:before {
+    font-size: 21px; /* Change this value to make dots bigger */
+    color: #000; /* You can also change the color if needed */
+}
+  
+.slick-dots li.slick-active button:before {
+    color: #000; /* Active dot color */
+}

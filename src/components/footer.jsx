@@ -18,13 +18,13 @@ function Footer() {
                 <p>All Rights Reserved</p>
             </div>
         </div>
-        <div className="relative flex justify-between flex-wrap px-4 lg:px-28 z-50">
+        <div className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 xl:gap-40  px-4 lg:px-28 z-50">
             <div className='flex flex-col justify-center gap-y-4'>
                 <p className='text-white font-light'>Join our newsletter to get our latest news </p>
                 <div className="flex flex-row justify-between">
                     <input 
                         type="email" placeholder='Email'
-                        className='w-48 bg-secondary border border-blue-light rounded-full px-5 py-2 placeholder:text-blue-light placeholder:font-light' 
+                        className='w-48 md:w-36 xl:w-48 bg-secondary border border-blue-light rounded-full px-5 py-2 placeholder:text-blue-light placeholder:font-light' 
                     />
                     <input type="submit" value="Join" className='bg-white border border-white text-secondary rounded-full w-16 text-center py-2 cursor-pointer hover:bg-secondary hover:text-white' />
                 </div>
@@ -43,14 +43,14 @@ function Footer() {
                     </svg>
                 </div>
             </div>
-            <div className='text-white flex flex-col gap-y-4'>
+            <div className='text-white flex flex-col gap-y-4 mx-auto'>
                 <p className='text-xl font-semibold mb-4 uppercase'>Quick Links</p>
                 <Link to={"/"}>Home</Link>
                 <Link to={"/"}>Our Services</Link>
                 <Link to={"/"}>Contact us</Link>
                 <Link to={"/"}>FAQs</Link>
             </div>
-            <div className='text-white flex flex-col gap-y-4'>
+            <div className='text-white flex flex-col gap-y-4 mx-auto'>
                 <p className='text-xl font-semibold mb-4 uppercase'>Recent News</p>
                 <Link to={"/"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
