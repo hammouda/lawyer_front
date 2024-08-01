@@ -1,6 +1,8 @@
+import ArticleComments from "../components/ArticleComments";
 import ArticleWriter from "../components/ArticleWriter";
 import Menu from "../components/menu";
 import RelevantArticles from "../components/RelevantArticles";
+
 
 
 function Article() {
@@ -25,6 +27,7 @@ function Article() {
                 </div>
                 <div className="w-90 text-black text-base font-normal font-['Roboto'] leading-[25px] tracking-tight">Fringilla ut morbi tincidunt augue. Id faucibus nisl tincidunt eget nullam non. Nisl tincidunt eget nullam non. Cursus risus at ultrices mi tempusimpe rdiet. Eget magna fermentum iaculis eu. Mattis molestie a iaculis at. Malesuada proin libero nunc consequat      
                 </div>
+                <ArticleComments/>
             </div>
             </div>
         </div>
