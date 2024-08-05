@@ -46,21 +46,21 @@ function Footer() {
             <div className='text-white flex flex-col gap-y-4 mx-auto'>
                 <p className='text-xl font-semibold mb-4 uppercase'>Quick Links</p>
                 <Link to={"/"}>Home</Link>
-                <Link to={"/"}>Our Services</Link>
-                <Link to={"/"}>Contact us</Link>
-                <Link to={"/"}>FAQs</Link>
+                <Link to={"/services"}>Our Services</Link>
+                <Link to={"/contact"}>Contact us</Link>
+                <Link to={"/about"}>About us</Link>
             </div>
             <div className='text-white flex flex-col gap-y-4 mx-auto'>
                 <p className='text-xl font-semibold mb-4 uppercase'>Recent News</p>
-                <Link to={"/"} className='flex gap-x-4 items-center'>
+                <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
                     <p>Article Title 1</p>
                 </Link>
-                <Link to={"/"} className='flex gap-x-4 items-center'>
+                <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
                     <p>Article Title 2</p>
                 </Link>
-                <Link to={"/"} className='flex gap-x-4 items-center'>
+                <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
                     <p>Article Title 3</p>
                 </Link>

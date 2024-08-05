@@ -12,7 +12,7 @@ function Services() {
         </p>
         <button className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit flex gap-x-4'>
             <CalendarDaysIcon className='w-5 h-5' />
-            <p className='text-sm'>Schedule Free Consultation</p>
+            <Link to="/contact/"><p className='text-sm'>Schedule Free Consultation</p></Link>
         </button>
       </div>
       <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24 justify-center md:justify-start">

@@ -28,7 +28,7 @@ function Menu() {
             </div>
             <button className='rounded-full bg-primary text-white py-3 px-4 hidden lg:flex gap-x-4 items-center z-50'>
                 <CalendarDaysIcon className='w-5 h-5' />
-                <p className='text-sm'>Schdule Free Consultation</p>
+                <Link to="/contact" className='text-sm'>Schdule Free Consultation</Link>
             </button>
             <button className='rounded-full bg-primary text-white p-2 lg:hidden items-center z-50'>
                 <CalendarDaysIcon className='w-5 h-5' />
