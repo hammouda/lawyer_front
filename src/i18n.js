@@ -37,7 +37,21 @@ const resources = {
       "mustapha-ahmed": "Mustapha Ahmed",
       "lawyer": "Lawyer",
       "case-studies": "Case Studies",
-      "check-our-blog": "Check Our Blog"
+      "check-our-blog": "Check Our Blog",
+      "Free Consulation": "Free consultation",
+      "Name":"Name",
+      "Email":"Email",
+      "Phone":"Phone",
+      "Case Description":"Phone Description",
+      "Pick Case Area":"Pivk Case Area",
+      "Send": "Send",
+      "Stay updated to the":"Stay updated to the",
+      "Newest":"Newest",
+      "legal":"legal",
+      "information":"information",
+      "Mithaq Al Tashrie: Article collection":"Mithaq Al Tashrie: Article collection",
+      "Pick a writer you want to read to":"Pick a writer you want to read to",
+      "Search an article":"Search an article"
     }
   },
   ar: {
@@ -74,7 +88,23 @@ const resources = {
       "mustapha-ahmed": "مصطفى أحمد",
       "lawyer": "محامي",
       "case-studies": "المدونة",
-      "check-our-blog": "اطلع على مدونتنا"
+      "check-our-blog": "اطلع على مدونتنا",
+      "Free Consulation": "طلب إستشارة",
+      "Name":"الإسم",
+      "Email":"البريد الإلكتروني",
+      "Phone":"الهاتف",
+      "Case Description":"وصف القضية",
+      "Pick Case Area":"اختيار المجال",
+      "Send":"إرسال",
+      "Stay updated to the":"ابق على ",
+      "Newest":"اطلاع",
+      "legal":"دائم",
+      "information":"على آخر المسجدات القانونية",
+      "Mithaq Al Tashrie: Article collection":"ميثاق التشريع : مجموعة المدونات",
+      "Pick a writer you want to read to":"اختر كاتب",
+      "Search an article": "ابحث عن مقال"
+
+
     }
   }
 };
