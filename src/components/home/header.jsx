@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <div className='bg-secondary px-4 md:px-16'>
+    <div className='bg-secondary px-4 md:px-16 pt-8 md:pt-0'>
         
         <div className='md:grid md:grid-cols-3 md:items-center'>
             <div className='md:col-span-2 md:ml-32'>
@@ -19,9 +19,9 @@ function Header() {
                         <CalendarDaysIcon className='w-5 h-5' />
                         <p className='text-sm'>Schdule Free Consultation</p>
                     </button>
-                    <button className='rounded-2xl bg-white text-secondary py-3 px-6 text-center'>
+                    <Link to={"/about"} className='rounded-2xl bg-white text-secondary py-3 px-6 text-center'>
                         <p className='text-sm'>Our Expertise</p>
-                    </button>
+                    </Link>
                 </div>
                 <div className='flex justify-center gap-x-5 mt-16 md:w-96'>
                     <div className='w-7 h-7 rounded-full bg-gradient-to-b from-primary to-primary-dark'></div>

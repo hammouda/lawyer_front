@@ -131,7 +131,7 @@ function Vision() {
             </div>
         </div>
         <div className="bg-white pt-5 pb-12 px-8 md:px-20">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-wrap justify-between items-center gap-y-4">
                 <img src="/images/brand-1.png" className='max-w-52' alt="" />
                 <img src="/images/brand-2.png" className='max-w-52' alt="" />
                 <img src="/images/brand-3.png" className='max-w-52' alt="" />

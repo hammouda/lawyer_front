@@ -1,8 +1,9 @@
 function ArticleWriter() {
     return(
         <>
-            <div className="100 h-[284.25px] bg-gradient-to-b from-black via-black to-black rounded-[20px]" >
-                <img src="/images/articleWriter.png"/>
+            <div className="w-fit h-fit relative" >
+                <img src="/images/articleWriter.png" className="relative rounded-[20px]"/>
+                <div className="h-full w-full top-0 absolute bg-gradient-to-t from-black rounded-[20px]"></div>
             </div>
             <div className="w-100 h-[55.50px] justify-between items-start inline-flex">
                 <div className="relative">

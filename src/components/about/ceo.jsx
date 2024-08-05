@@ -19,7 +19,7 @@ function Ceo() {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati esse harum rem sit aut. Voluptas totam ipsam quos reiciendis minima aperiam, adipisci dolore rem dignissimos. Molestiae quos molestias iste rem?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam ab nisi, ullam, accusantium optio ad perferendis illum dolores veritatis sint sunt dolor porro autem vero unde quisquam ea. Autem.
                 </p>
-                <Link to={"/"} className='flex w-fit items-center justify-center px-6 py-4 rounded-2xl border border-gold text-white hover:bg-gold hover:text-secondary'>
+                <Link to={"/services"} className='flex w-fit items-center justify-center px-6 py-4 rounded-2xl border border-gold text-white hover:bg-gold hover:text-secondary'>
                     Check Our Services
                 </Link>
             </div>

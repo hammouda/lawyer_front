@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function About() {
   return (
@@ -6,13 +7,13 @@ function About() {
       <div className="hidden md:block absolute right-0 top-0 z-10">
         <img src="/images/overlay.png" className='w-80' alt="" />
       </div>
-      <div className="flex px-4 md:px-16 justify-between flex-wrap">
+      <div className=" relative z-50 flex px-4 md:px-16 justify-between flex-wrap">
         <p className="text-xl lg:text-4xl text-blue-dark font-semibold mb-4 md:mb-0">
           Learn More About <br/>Our Firm's Journey and Values
         </p>
-        <button className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit'>
+        <Link to={"/about"} className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit'>
             <p className='text-sm'>Learn More</p>
-        </button>
+        </Link>
       </div>
       <div className="grid mt-14 md:grid-cols-2 px-4 md:px-16 md:gap-x-10 lg:gap-x-28">
         <div className="w-full mb-4 md:mb-0">

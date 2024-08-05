@@ -83,7 +83,7 @@ function Services() {
             </div>
         </div>
         
-        <Link to={"/"} className='flex flex-col justify-end lg:ml-16'>
+        <Link to={"/services"} className='flex flex-col justify-end lg:ml-16'>
             <p className='text-blue-dark font-semibold text-2xl'>Check more services</p>
             <ArrowLongRightIcon className='w-24 h-24 text-blue-dark' />
         </Link>
