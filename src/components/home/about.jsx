@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
 
 function About() {
+  const { t, i18n } = useTranslation();
   return (
     <div className='bg-blue-light py-16 relative'>
       <div className="hidden md:block absolute right-0 top-0 z-10">
@@ -9,10 +11,10 @@ function About() {
       </div>
       <div className=" relative z-50 flex px-4 md:px-16 justify-between flex-wrap">
         <p className="text-xl lg:text-4xl text-blue-dark font-semibold mb-4 md:mb-0">
-          Learn More About <br/>Our Firm's Journey and Values
+          {t("learn-more-about")} <br/>{t("firm-journey-values")}
         </p>
         <Link to={"/about"} className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit'>
-            <p className='text-sm'>Learn More</p>
+            <p className='text-sm'>{t('learn-more')}</p>
         </Link>
       </div>
       <div className="grid mt-14 md:grid-cols-2 px-4 md:px-16 md:gap-x-10 lg:gap-x-28">

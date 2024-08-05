@@ -1,16 +1,19 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom';
 
 function Cases() {
+  const {t} = useTranslation();
   return (
     <div className='bg-white px-4 py-16 lg:p-16'>
       <div className="flex justify-between">
         <div>
-          <p className="text-3xl text-secondary font-semibold leading-relaxed">Case Studies</p>
+          <p className="text-3xl text-secondary font-semibold leading-relaxed">{t("case-studies")}</p>
           <p className="text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
-        <button className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit'>
-            <p className='text-sm'>Check Our Blog</p>
-        </button>
+        <Link to={"/articles"} className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit'>
+            <p className='text-sm'>{t('check-our-blog')}</p>
+        </Link>
       </div>
       <div className="mt-8 grid md:grid-cols-3 gap-3">
         <div className="w-full relative rounded-2xl h-fit">

@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 function Team() {
+    const {t} = useTranslation();
   return (
     <div className='bg-secondary p-4 md:grid md:grid-cols-2 gap-16 relative'>
         <div className="absolute z-0 right-0 top-0">
@@ -10,9 +12,9 @@ function Team() {
         <img src="/images/team-0.png" className='w-full rounded-2xl' alt="" />
         <div className="mt-16 lg:pr-20">
             <div className="flex w-full justify-between items-center flex-wrap gap-y-4 md:gap-y-0">
-                <p className='text-white text-4xl font-medium'>Meet Our Team</p>
+                <p className='text-white text-4xl font-medium'>{t("meet-our-team")}</p>
                 <Link to={"/"} className='rounded-full border border-white px-7 py-3 text-center text-lg font-bold text-white'>
-                    See More Team
+                    {t("see-more")}
                 </Link>
             </div>
             <p className="mt-5 text-white w-full text-justify">
@@ -24,7 +26,7 @@ function Team() {
                     <div className="absolute bottom-2 w-full">
                         <div className="relative text-center">
                             <div className="flex justify-center items-center gap-x-2">
-                                <p className='text-white text-xl font-semibold'>Mustapha Ahmed</p>
+                                <p className='text-white text-xl font-semibold'>{t("mustapha-ahmed")}</p>
                                 <div className='text-white'>
                                     <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" style={{fill: '#FFF'}} viewBox="0 0 50 50">
                                         <path d="M25,2C12.318,2,2,12.317,2,25s10.318,23,23,23s23-10.317,23-23S37.682,2,25,2z M18,35h-4V20h4V35z M16,17 c-1.105,0-2-0.895-2-2c0-1.105,0.895-2,2-2s2,0.895,2,2C18,16.105,17.105,17,16,17z M37,35h-4v-5v-2.5c0-1.925-1.575-3.5-3.5-3.5 S26,25.575,26,27.5V35h-4V20h4v1.816C27.168,20.694,28.752,20,30.5,20c3.59,0,6.5,2.91,6.5,6.5V35z"></path>
@@ -36,7 +38,7 @@ function Team() {
                                     </svg>
                                 </div>
                             </div>
-                            <p className='text-white text-base'>Lawyer</p>
+                            <p className='text-white text-base'>{t("lawyer")}</p>
                         </div>
                     </div>
                 </div>
@@ -45,9 +47,9 @@ function Team() {
                     <div className="absolute bottom-2 w-full">
                         <div className="relative text-center">
                             <div className="flex justify-center text-center gap-x-2">
-                                <p className='text-white text-xl font-semibold'>Mustapha Ahmed</p>
+                                <p className='text-white text-xl font-semibold'>{t("mustapha-ahmed")}</p>
                             </div>
-                            <p className='text-white text-base'>Lawyer</p>
+                            <p className='text-white text-base'>{t("lawyer")}</p>
                         </div>
                     </div>
                 </div>

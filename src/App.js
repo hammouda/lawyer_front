@@ -6,10 +6,12 @@ import Articles from "./pages/Articles";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Service from "./pages/Service";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { i18n } = useTranslation();
   return (
-    <div className="App font-roboto">
+    <div className="App font-roboto" dir={i18n.language=='ar'?'rtl':'ltr'}>
       <Router>
         <Routes>
           <Route path="/" element={<Home/>} />
