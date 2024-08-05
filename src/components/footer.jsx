@@ -1,8 +1,10 @@
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 function Footer() {
+    const {t, i18n} = useTranslation();
   return (
     <div className='bg-secondary py-14 relative'>
         <div className="hidden lg:block absolute opacity-20 bottom-0 w-full px-4 z-0">
@@ -13,20 +15,20 @@ function Footer() {
         </div>
         <div className="absolute bottom-2.5 w-full z-0">
             <div className='flex justify-center items-center gap-x-2.5 text-white'>
-                <p>Copyright 2024</p>
+                <p>{t("copyright-2024")}</p>
                 <p className='text-xl'>©</p>
-                <p>All Rights Reserved</p>
+                <p>{t("rights-reserved")}</p>
             </div>
         </div>
         <div className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 xl:gap-40  px-4 lg:px-28 z-50">
             <div className='flex flex-col justify-center gap-y-4'>
-                <p className='text-white font-light'>Join our newsletter to get our latest news </p>
+                <p className='text-white font-light'>{t('join-newsletter')} </p>
                 <div className="flex flex-row justify-between">
                     <input 
-                        type="email" placeholder='Email'
-                        className='w-48 md:w-36 xl:w-48 bg-secondary border border-blue-light rounded-full px-5 py-2 placeholder:text-blue-light placeholder:font-light' 
+                        type="email" placeholder={t("email")}
+                        className='w-48 md:w-36 xl:w-48 bg-secondary text-white border border-blue-light rounded-full px-5 py-2 placeholder:text-blue-light placeholder:font-light' 
                     />
-                    <input type="submit" value="Join" className='bg-white border border-white text-secondary rounded-full w-16 text-center py-2 cursor-pointer hover:bg-secondary hover:text-white' />
+                    <input type="submit" value={t('join')} className='bg-white border border-white text-secondary rounded-full w-16 text-center py-2 cursor-pointer hover:bg-secondary hover:text-white' />
                 </div>
                 <div className="flex justify-center gap-x-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
@@ -44,25 +46,25 @@ function Footer() {
                 </div>
             </div>
             <div className='text-white flex flex-col gap-y-4 mx-auto'>
-                <p className='text-xl font-semibold mb-4 uppercase'>Quick Links</p>
-                <Link to={"/"}>Home</Link>
-                <Link to={"/services"}>Our Services</Link>
-                <Link to={"/contact"}>Contact us</Link>
-                <Link to={"/about"}>About us</Link>
+                <p className='text-xl font-semibold mb-4 uppercase'>{t("Quick Links")}</p>
+                <Link to={"/"}>{t("home")}</Link>
+                <Link to={"/services"}>{t("our-services")}</Link>
+                <Link to={"/contact"}>{t("contact-us")}</Link>
+                <Link to={"/about"}>{t("about-us")}</Link>
             </div>
             <div className='text-white flex flex-col gap-y-4 mx-auto'>
-                <p className='text-xl font-semibold mb-4 uppercase'>Recent News</p>
+                <p className='text-xl font-semibold mb-4 uppercase'>{t("Recent News")}</p>
                 <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
-                    <p>Article Title 1</p>
+                    <p>{t("Article Title")} 1</p>
                 </Link>
                 <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
-                    <p>Article Title 2</p>
+                    <p>{t("Article Title")} 2</p>
                 </Link>
                 <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
-                    <p>Article Title 3</p>
+                    <p>{t("Article Title")} 3</p>
                 </Link>
             </div>
         </div>

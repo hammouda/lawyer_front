@@ -3,18 +3,20 @@ import Menu from '../components/menu'
 import Footer from '../components/footer'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import Contact from '../components/about/contact'
+import { useTranslation } from 'react-i18next'
 
 function Service() {
+    const {t} = useTranslation();
   return (
     <div>
         <Menu/>
         <div className="w-full bg-white py-16 mx-auto px-8 md:px-0 md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-xl">
-            <p className="text-5xl font-semibold text-secondary capitalize">Real state cases</p>
+            <p className="text-5xl font-semibold text-secondary capitalize">{t("Real estate cases")}</p>
             <p className="text-3xl text-secondary mt-3">
-                Expert Legal Solutions for Your Property Disputes
+                {t("Expert Legal Solutions for Your Property Disputes")}
             </p>
             <p className="my-8 text-lg text-secondary text-justify">
-                Real estate transactions and ownership in Tunisia are governed by a complex web of laws and regulations.  Whether you're a seasoned investor, a first-time homebuyer, or a business owner with commercial property interests, understanding your legal rights and obligations is crucial to protect your valuable assets. Our team of experienced real estate lawyers is well-versed in Tunisian property law and dedicated to providing you with the comprehensive legal support you need to navigate any real estate challenge.
+                {t("service-paragraph-1")}
             </p>
             <img src="/images/service-img.png" className='w-full rounded-2xl' alt="" />
             <p className="my-8 text-lg text-secondary text-justify">
@@ -23,7 +25,7 @@ function Service() {
             <div className="grid md:grid-cols-2 gap-8">
                 <div>
                     <p className='text-2xl text-black font-medium mb-7'>
-                        What will you get?
+                       {t("What will you get")}
                     </p>
                     <div className="flex flex-col gap-y-4">
                         <div className="flex gap-x-3">
@@ -46,24 +48,24 @@ function Service() {
                 </div>
                 <div className='mx-auto'>
                     <p className='text-2xl text-black font-medium mb-7'>
-                        How does it work?
+                        {t("How does it work")}
                     </p>
                     <div className="flex flex-col gap-y-4">
                         <div className="flex gap-x-3">
                             <CheckIcon className='text-primary-light w-6 h-6' />
-                            <p className="text-black">Comprehensive Legal Counsel</p>
+                            <p className="text-black">{t("Comprehensive Legal Counse")}</p>
                         </div>
                         <div className="flex gap-x-3">
                             <CheckIcon className='text-primary-light w-6 h-6' />
-                            <p className="text-black">Dispute Resolution</p>
+                            <p className="text-black">{t("Dispute Resolution")}</p>
                         </div>
                         <div className="flex gap-x-3">
                             <CheckIcon className='text-primary-light w-6 h-6' />
-                            <p className="text-black">Document Drafting and Review</p>
+                            <p className="text-black">{t("Document Drafting and Review")}</p>
                         </div>
                         <div className="flex gap-x-3">
                             <CheckIcon className='text-primary-light w-6 h-6' />
-                            <p className="text-black">Litigation and Representation</p>
+                            <p className="text-black">{t("Litigation and Representation")}</p>
                         </div>
                     </div>
                 </div>

@@ -19,80 +19,81 @@ function Services() {
       </div>
       <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24 justify-center md:justify-start">
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-0.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("bankruptcy")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-1.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("financial-claims")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-2.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("commercial-arbitration")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-3.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("drafting-and-reviewing")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-15.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("debt-collection")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-4.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("civil-cases")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-5.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("legal-risk-analysis")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-6.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("memorandums-and-regulations")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-7.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("documentation")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-8.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("legal-consultations")}</p>
             </div>
         </div>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-            <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+            <img src="/images/services/service-9.png" className='h-52 rounded-2xl' alt="" />
             <div className="mt-2 text-center">
                 <p className="text-xs font-medium text-white uppercase">{t("corporate-governance")}</p>
             </div>
         </div>
-        
-        <Link to={"/services"} className='flex flex-col justify-end lg:mx-16'>
-            <p className='text-blue-dark font-semibold text-2xl'>{t("more-services")}</p>
-            {i18n.language=='ar'
-                ? (<ArrowLongLeftIcon className='w-24 h-24 text-blue-dark' />)
-                : (<ArrowLongRightIcon className='w-24 h-24 text-blue-dark' />)
-            }
-            
-        </Link>
+        <div className={`flex flex-col justify-end ${i18n.language=='ar' ? 'lg:mr-16': 'lg:ml-16'}`}>
+            <Link to={"/services"} className=''>
+                <p className='text-blue-dark font-semibold text-2xl'>{t("more-services")}</p>
+                {i18n.language=='ar'
+                    ? (<ArrowLongLeftIcon className='w-24 h-24 text-blue-dark' />)
+                    : (<ArrowLongRightIcon className='w-24 h-24 text-blue-dark' />)
+                }
+                
+            </Link>
+        </div>
       </div>
     </div>
   )
