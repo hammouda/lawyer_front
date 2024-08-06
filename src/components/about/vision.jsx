@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './custom.css';
+import { useTranslation } from 'react-i18next';
 
 function Vision() {
     const settings = {
@@ -14,15 +15,16 @@ function Vision() {
         slidesToScroll: 1
       };
 
+      const {t, i18n} = useTranslation();
   return (
     <div>
         <div className="bg-white px-8 md:px-20 py-16 flex flex-wrap justify-between items-center">
             <div className='py-6'>
                 <div className="flex flex-col gap-y-8">
                     <div>
-                        <p className='text-black text-4xl font-semibold'>Our Vision for the Future:</p>
+                        <p className='text-black text-4xl font-semibold'>{t("Our Vision for the Future")}</p>
                         <p className='mt-5 text-gray text-lg max-w-xl'>
-                        We are a team with a variety of skills, each member contributes their expertise, and works professionally among members and clients.
+                        {t("We are a team with a variety")}
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-6 max-w-xl">
@@ -33,8 +35,8 @@ function Vision() {
                                 </svg>
                             </div>
                             <div>
-                                <p className='text-black text-xl font-medium'>Leadership</p>
-                                <p className="text-black">To be a top-tier law firm in Saudi Arabia</p>
+                                <p className='text-black text-xl font-medium'>{t("Leadership")}</p>
+                                <p className="text-black">{t("To be a top-tier law firm in Saudi Arabia")}</p>
                             </div>
                         </div>
                         <div className='flex flex-wrap gap-2 md:flex-nowrap md:gap-4 h-fit'>
@@ -44,8 +46,8 @@ function Vision() {
                                 </svg>
                             </div>
                             <div>
-                                <p className='text-black text-xl font-medium'>Destination for Excellence</p>
-                                <p className="text-black">Known for accurate, effective legal services</p>
+                                <p className='text-black text-xl font-medium'>{t("Destination for Excellence")}</p>
+                                <p className="text-black">{t("Known for accurate")}</p>
                             </div>
                         </div>
                         <div className='flex flex-wrap gap-2 md:flex-nowrap md:gap-4 h-fit'>
@@ -55,8 +57,8 @@ function Vision() {
                                 </svg>
                             </div>
                             <div>
-                                <p className='text-black text-xl font-medium'>Experience & Knowledge</p>
-                                <p className="text-black">A team with deep experience and expertise</p>
+                                <p className='text-black text-xl font-medium'>{t("Experience & Knowledge")}</p>
+                                <p className="text-black">{t("A team with deep experience and expertise")}</p>
                             </div>
                         </div>
                         <div className='flex flex-wrap gap-2 md:flex-nowrap md:gap-4 h-fit'>
@@ -66,8 +68,8 @@ function Vision() {
                                 </svg>
                             </div>
                             <div>
-                                <p className='text-black text-xl font-medium'>Innovation</p>
-                                <p className="text-black">Leading the way with innovative legal solutions</p>
+                                <p className='text-black text-xl font-medium'>{t("Innovation")}</p>
+                                <p className="text-black">{t("Leading the way with innovative legal solutions")}</p>
                             </div>
                         </div>
                     </div>
@@ -83,12 +85,12 @@ function Vision() {
             </div>
             <div className="flex flex-wrap lg:flex-nowrap gap-4 lg:gap-20">
                 <div className='max-w-72 md:max-w-xs'>
-                    <p className="uppercase text-black text-lg lg:text-xl mb-2">Testimonials</p>
-                    <p className="text-black text-2xl lg:text-[40px] font-medium leading-snug">What Our Clients Are Saying?</p>
+                    <p className="uppercase text-black text-lg lg:text-xl mb-2">{t("Testimonials")}</p>
+                    <p className="text-black text-2xl lg:text-[40px] font-medium leading-snug">{t("What Our Clients Are Saying?")}</p>
                 </div>
                 <div className="max-w-72 lg:max-w-2xl mx-auto pt-10 pb-8 relative">
                     <Slider {...settings}>
-                        <div className="item">
+                        <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
                             <div className="flex flex-col gap-y-4">
                                 <p className='text-lg text-black'>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iusto natus quasi iste autem ea provident quos rem quis quaerat, blanditiis non suscipit tempora unde dolorem velit fuga deserunt. Amet.
@@ -99,7 +101,7 @@ function Vision() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
                             <div className="flex flex-col gap-y-4">
                                 <p className='text-lg text-black'>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iusto natus quasi iste autem ea provident quos rem quis quaerat, blanditiis non suscipit tempora unde dolorem velit fuga deserunt. Amet.
@@ -110,7 +112,7 @@ function Vision() {
                                 </div>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
                             <div className="flex flex-col gap-y-4">
                                 <p className='text-lg text-black'>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iusto natus quasi iste autem ea provident quos rem quis quaerat, blanditiis non suscipit tempora unde dolorem velit fuga deserunt. Amet.

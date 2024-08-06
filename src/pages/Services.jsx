@@ -2,8 +2,11 @@ import React from 'react'
 import Menu from '../components/menu'
 import Footer from '../components/footer'
 import { CalendarDaysIcon } from '@heroicons/react/24/outline'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 function Services() {
+    const {t, i18n} = useTranslation();
   return (
     <div>
         <Menu/>
@@ -13,80 +16,102 @@ function Services() {
         <div className='bg-white py-20 px-4 md:px-16'>
             <div className="flex justify-between flex-wrap">
                 <p className="text-xl lg:text-4xl text-blue-dark font-semibold mb-4 md:mb-0">
-                Our Expertise : <br/>Solutions Tailored to Your Legal Needs
+                {t('our-expertise-2')} <br/>{t('solutions-tailored')}
                 </p>
                 <button className='rounded-2xl bg-white text-secondary py-3 px-6 text-center border border-primary-dark h-fit flex gap-x-4'>
                     <CalendarDaysIcon className='w-5 h-5' />
-                    <p className='text-sm'>Schedule Free Consultation</p>
+                    <p className='text-sm'>{t("schedule-free-consultation")}</p>
                 </button>
             </div>
             <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24 justify-center md:justify-start">
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-0.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Bankruptcy</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("bankruptcy")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-1.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Financial Claims</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("financial-claims")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-2.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Commercial Arbitration</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("commercial-arbitration")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-3.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Drafting and Reviewing Contracts</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("drafting-and-reviewing")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-15.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Debt Collection</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("debt-collection")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-4.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Civil Cases</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("civil-cases")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-5.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Legal Risk Analysis</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("legal-risk-analysis")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-6.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Writing Memorandums and Regulations</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("memorandums-and-regulations")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-7.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Documentation</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("documentation")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-8.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Legal Consultations</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("legal-consultations")}</p>
                     </div>
                 </div>
+                </Link>
+                <Link to={"/services/1"}>
                 <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
-                    <img src="/images/service-1.png" className='h-52 rounded-2xl' alt="" />
+                    <img src="/images/services/service-9.png" className='h-52 rounded-2xl' alt="" />
                     <div className="mt-2 text-center">
-                        <p className="text-xs font-medium text-white uppercase">Corporate Governance</p>
+                        <p className="text-xs font-medium text-white uppercase">{t("corporate-governance")}</p>
                     </div>
                 </div>
+                </Link>
             </div>
         </div>
         <Footer/>

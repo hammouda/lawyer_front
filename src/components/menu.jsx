@@ -51,27 +51,27 @@ function Menu() {
               <DisclosureButton as="a" href={'/'}
                 className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium ${location.pathname==='/'?'text-primary':'text-white'}`}
               >
-                Home
+                {t('home')}
               </DisclosureButton>
               <DisclosureButton as="a" href={'/about'}
                 className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium ${location.pathname==='/about'?'text-primary':'text-white'}`}
               >
-                About us
+                {t('about-us')}
               </DisclosureButton>
               <DisclosureButton as="a" href={'/services'}
                 className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium ${location.pathname.startsWith('/services')?'text-primary':'text-white'}`}
               >
-                Services
+                {t('our-services')}
               </DisclosureButton>
               <DisclosureButton as="a" href={'/articles'}
                 className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium ${location.pathname.startsWith('/articles')?'text-primary':'text-white'}`}
               >
-                Blog
+                {t('blog')}
               </DisclosureButton>
               <DisclosureButton as="a" href={'/contact'}
                 className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium ${location.pathname==='/contact'?'text-primary':'text-white'}`}
               >
-                Contact us
+                {t('contact-us')}
               </DisclosureButton>
               <DisclosureButton as="a" href={'/'}
                 className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium text-white`}
