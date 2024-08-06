@@ -2,9 +2,30 @@ import ArticleCard from "../components/ArticleCard";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function Articles() {
     const { t, i18n } = useTranslation();
+    const [articles, setArticles]= useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get('http://127.0.0.1:8000/api/articles');
+            if (Array.isArray(response.data.articles)) {
+              setArticles(response.data.articles);
+            } else {
+              console.error('API response is not an array');
+            }
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+      
+        fetchData();
+      }, []);
+      
 
+    
     return(
         <>
         <Menu/>
@@ -37,15 +58,11 @@ function Articles() {
                 </div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
-                <div><ArticleCard/></div>
+               {articles.map((article)=>(
+                   <ArticleCard article={article}/>
+                ))
+                }
+                
 
             </div>
         </div>

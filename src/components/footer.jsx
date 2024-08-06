@@ -56,11 +56,11 @@ function Footer() {
                     <ChevronRightIcon className='text-primary w-4 h-4' />
                     <p>Article Title 1</p>
                 </Link>
-                <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
+                <Link to={"/articles/2"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
                     <p>Article Title 2</p>
                 </Link>
-                <Link to={"/articles/1"} className='flex gap-x-4 items-center'>
+                <Link to={"/articles/3"} className='flex gap-x-4 items-center'>
                     <ChevronRightIcon className='text-primary w-4 h-4' />
                     <p>Article Title 3</p>
                 </Link>
