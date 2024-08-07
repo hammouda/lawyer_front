@@ -1,8 +1,29 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
     const {t} = useTranslation();
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [phone, setPhone] = useState();
+    const [message, setMessage] = useState();
+    const [area, setArea] = useState();
+    const handleSubmit =async (e) => {
+        e.preventDefault();
+        // Use FormData to handle file uploads
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('message', message);
+        formData.append('subject', area);
+        try{
+            axios.post('http://54.247.72.79/api/contact', formData);
+            console.log('contact sent')
+        }catch (error){
+            console.log(error)
+        }
+    };
   return (
     <div className='bg-primary-lighter px-4 lg:px-36 py-16 relative'>
         <div className="absolute bottom-0 right-0">
@@ -16,28 +37,49 @@ function Contact() {
                   <form>
                     <div className="grid md:grid-cols-2 gap-5">
                         <input 
+                            id="name"
+                            name='name'
                             type="text" placeholder={t('name')}
                             className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
                         <input 
+                            id="email"
+                            name="email"
                             type="email" placeholder={t('email')}
                             className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <input 
+                            id="phone"
+                            name="phone"
                             type="text" placeholder={t('phone')}
                             className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                            value={phone}
+                            onChange={(e)=>setPhone(e.target.value)}
                         />
-                        <select className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 ' >
+                        <select 
+                            className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 ' 
+                            id="area"
+                            name="area"
+                            onChange={(e)=>setArea(e.target.value)}
+                        >
                             <option>{t('pick-case-area')}</option>
                             <option>{t('area')} 1</option>
-                            <option>{t('area')} 1</option>
-                            <option>{t('area')} 1</option>
-                            <option>{t('area')} 1</option>
+                            <option>{t('area')} 2</option>
+                            <option>{t('area')} 3</option>
+                            <option>{t('area')} 4</option>
                         </select>
                     </div>
                     <textarea 
+                        id="message"
+                        name="message"
                         placeholder={t('case-description')} rows={4}
                         className='mt-5 bg-primary-lighter border border-primary-dark rounded-3xl w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                        value={message}
+                        onChange={(e)=>setMessage(e.target.value)} 
                     ></textarea>
                     <input type="submit" value={t("send")} className='mt-5 bg-primary-lighter border border-primary-dark rounded-full px-8 py-2 cursor-pointer hover:bg-primary-dark hover:text-white' />
                   </form>

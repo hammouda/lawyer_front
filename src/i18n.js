@@ -105,7 +105,8 @@ const resources = {
       "Testimonials": "Testimonials",
       "What Our Clients Are Saying?": "What Our Clients Are Saying?",
       "solutions-tailored-1": "Solutions Tailored",
-      "legal-needs": "to Your Legal Needs"
+      "legal-needs": "to Your Legal Needs",
+      "Download File" : "Download File"
     }
   },
   ar: {
@@ -210,7 +211,8 @@ const resources = {
       "Testimonials": "تجارب عملائنا",
       "What Our Clients Are Saying?": "ماذا يقولون؟",
       "solutions-tailored-1": "حلول مُصممة خصيصًا",
-      "legal-needs": "لتلبية احتياجاتك القانونية"
+      "legal-needs": "لتلبية احتياجاتك القانونية",
+      "Download File" : "تحميل الملف"
     }
   }
 };
