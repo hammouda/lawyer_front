@@ -11,7 +11,7 @@ function Services() {
     <div>
         <Menu/>
         <div className="bg-secondary w-full relative h-48">
-            <img src="/images/overlay-5.png" className='absolute right-0 bottom-0 z-10 w-[490px]' alt="" />
+            <img src="/images/overlay-5.png" className='absolute right-0 bottom-0 z-0 w-[490px]' alt="" />
         </div>
         <div className='bg-white py-20 px-4 md:px-16'>
             <div className="flex justify-between flex-wrap">

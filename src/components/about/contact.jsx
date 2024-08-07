@@ -9,8 +9,11 @@ function Contact() {
     const [phone, setPhone] = useState();
     const [message, setMessage] = useState();
     const [area, setArea] = useState();
+    const [showNotif, setShowNotif] = useState(false);
+
     const handleSubmit =async (e) => {
         e.preventDefault();
+        console.log("sending")
         // Use FormData to handle file uploads
         const formData = new FormData();
         formData.append('name', name);
@@ -19,9 +22,21 @@ function Contact() {
         formData.append('subject', area);
         try{
             axios.post('http://54.247.72.79/api/contact', formData);
-            console.log('contact sent')
+            empty();
+            setShowNotif(true);
+            setTimeout(() => {
+                setShowNotif(false)
+            }, 3000);
         }catch (error){
             console.log(error)
+        }
+
+        const empty = () => {
+            setName("");
+            setEmail("");
+            setArea("");
+            setMessage("");
+            setPhone("");
         }
     };
   return (
@@ -31,11 +46,16 @@ function Contact() {
         </div>
         <div className="relative grid md:grid-cols-2 gap-16">
             <div>
+                {showNotif && (
+                    <div className='w-full px-6 py-2 bg-primary-lighter shadow-lg rounded-lg mb-4'>
+                        <p className='text-lg font-medium text-secondary'>{t("message-success")}</p>
+                    </div>
+                )}
                 <p className="text-white text-4xl font-medium leading-relaxed">{t("free-consulation")}</p>
                 <p className="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div className='mt-8'>
-                  <form>
-                    <div className="grid md:grid-cols-2 gap-5">
+                  <form onSubmit={handleSubmit}>
+                    <div className="grid md:grid-cols-2 gap-5 text-white">
                         <input 
                             id="name"
                             name='name'
@@ -75,7 +95,9 @@ function Contact() {
                     </div>
                     <textarea 
                         placeholder={t('case-description')} rows={4}
-                        className='mt-5 bg-secondary border border-gray rounded-3xl w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
+                        className='mt-5 bg-secondary text-white border border-gray rounded-3xl w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
+                        value={message}
+                        onChange={(e)=>setMessage(e.target.value)} 
                     ></textarea>
                     <input type="submit" value={t("send")} className='mt-5 bg-secondary text-white border border-white rounded-full px-8 py-2 cursor-pointer hover:bg-white hover:text-secondary' />
                   </form>

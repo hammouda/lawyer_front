@@ -33,7 +33,7 @@ function Article() {
         fetchData();
       }, [id]);
 
-    if (loading) return <p>Loading...</p>;
+    //if (loading) return <p>Loading...</p>;
     if (error) return <p>Error loading article: {error.message}</p>;
     const download=()=>{
       const link = document.createElement('a');
@@ -41,8 +41,10 @@ function Article() {
       link.download = article.file.original_name;
       link.click();
     }
-    return(<>
+   return(
+    <>
     <Menu/>
+    {article && (
     <div className="w-full bg-white py-16 mx-auto px-8 md:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
         <div className="grid md:grid-cols-4 gap-10 lg:gap-28">
             <div className="col-span-1 ">
@@ -73,6 +75,7 @@ function Article() {
         </div>
             <RelevantArticles/>
     </div>
+    )}
     <Contact/>
     <Footer/>
     </>);

@@ -8,6 +8,8 @@ function ContactForm() {
     const [phone, setPhone] = useState();
     const [message, setMessage] = useState();
     const [area, setArea] = useState();
+    const [showNotif, setShowNotif] = useState(false);
+
     const handleSubmit =async (e) => {
         e.preventDefault();
         // Use FormData to handle file uploads
@@ -18,14 +20,31 @@ function ContactForm() {
         formData.append('subject', area);
         try{
             axios.post('http://54.247.72.79/api/contact', formData);
-            console.log('contact sent')
+            empty();
+            setShowNotif(true);
+            setTimeout(() => {
+                setShowNotif(false)
+            }, 3000);
         }catch (error){
             console.log(error)
         }
 
     };
+
+    const empty = () => {
+        setName("");
+        setEmail("");
+        setArea("");
+        setMessage("");
+        setPhone("");
+    }
     return(
         <div className="p-6">
+                {showNotif && (
+                    <div className='w-full px-6 py-2 bg-primary-lighter shadow-lg rounded-lg mb-4'>
+                        <p className='text-lg font-medium text-secondary'>{t("message-success")}</p>
+                    </div>
+                )}
                 <p className="text-secondary text-4xl font-medium leading-relaxed">{t("Free Consulation")}</p>
                 <p className="text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div className='mt-8'>

@@ -9,6 +9,8 @@ function Contact() {
     const [phone, setPhone] = useState();
     const [message, setMessage] = useState();
     const [area, setArea] = useState();
+    const [showNotif, setShowNotif] = useState(false);
+
     const handleSubmit =async (e) => {
         e.preventDefault();
         // Use FormData to handle file uploads
@@ -19,11 +21,22 @@ function Contact() {
         formData.append('subject', area);
         try{
             axios.post('http://54.247.72.79/api/contact', formData);
-            console.log('contact sent')
+            empty();
+            setShowNotif(true);
+            setTimeout(() => {
+                setShowNotif(false)
+            }, 3000);
         }catch (error){
             console.log(error)
         }
     };
+    const empty = () => {
+        setName("");
+        setEmail("");
+        setArea("");
+        setMessage("");
+        setPhone("");
+    }
   return (
     <div className='bg-primary-lighter px-4 lg:px-36 py-16 relative'>
         <div className="absolute bottom-0 right-0">
@@ -31,10 +44,15 @@ function Contact() {
         </div>
         <div className="grid md:grid-cols-2 gap-16">
             <div>
+                {showNotif && (
+                    <div className='w-full px-6 py-2 bg-primary-lighter shadow-lg rounded-lg mb-4'>
+                        <p className='text-lg font-medium text-secondary'>{t("message-success")}</p>
+                    </div>
+                )}
                 <p className="text-secondary text-4xl font-medium leading-relaxed">{t("free-consulation")}</p>
                 <p className="text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <div className='mt-8'>
-                  <form>
+                  <form onSubmit={handleSubmit}> 
                     <div className="grid md:grid-cols-2 gap-5">
                         <input 
                             id="name"

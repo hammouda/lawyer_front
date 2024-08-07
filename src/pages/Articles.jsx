@@ -40,7 +40,7 @@ function Articles() {
         <div className="w-full bg-white py-16 mx-auto px-8 md:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
             <div className="lg:px-14 w-full">
                 <p className="text-black text-[40px] font-bold font-['Roboto']">{t("Mithaq Al Tashrie: Article collection")}</p>
-                <div className="grid lg:grid-cols-4 gap-11 mt-10">
+                {/* <div className="grid lg:grid-cols-4 gap-11 mt-10">
                     <div className="lg:col-span-3">
                         <input 
                             type="text" placeholder={t("Search an article")} 
@@ -55,7 +55,7 @@ function Articles() {
                             <option>Hammouda Mohamed Amin</option>
                         </select>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
                {articles.map((article)=>(
