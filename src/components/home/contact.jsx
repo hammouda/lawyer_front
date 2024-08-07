@@ -42,7 +42,7 @@ function Contact() {
         <div className="absolute bottom-0 right-0">
             <img src="/images/overlay-3.png" className='opacity-70' alt="" />
         </div>
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-16 relative z-50">
             <div>
                 {showNotif && (
                     <div className='w-full px-6 py-2 bg-primary-lighter shadow-lg rounded-lg mb-4'>
@@ -85,10 +85,15 @@ function Contact() {
                             onChange={(e)=>setArea(e.target.value)}
                         >
                             <option>{t('pick-case-area')}</option>
-                            <option>{t('area')} 1</option>
-                            <option>{t('area')} 2</option>
-                            <option>{t('area')} 3</option>
-                            <option>{t('area')} 4</option>
+                            <option value={"Bankruptcy"}>{t("bankruptcy")}</option>
+                            <option value={"Commercial Arbitration"}>{t("financial-claims")}</option>
+                            <option value={"Drafting and Reviewing"}>{t("drafting-and-reviewing")}</option>
+                            <option value={"Debt Collection"}>{t("debt-collection")}</option>
+                            <option value={"Civil Cases"}>{t("civil-cases")}</option>
+                            <option value={"Legal Risk Analysis"}>{t("legal-risk-analysis")}</option>
+                            <option value={"Writing Memorandums and Regulations"}>{t("memorandums-and-regulations")}</option>
+                            <option value={"Documentation"}>{t("documentation")}</option>
+                            <option value={"Legal Consultations"}>{t("legal-consultations")}</option>
                         </select>
                     </div>
                     <textarea 

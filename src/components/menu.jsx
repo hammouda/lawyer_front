@@ -15,7 +15,7 @@ function Menu() {
   };
 
   return (
-    <Disclosure as="nav" className="bg-secondary  md:px-16">
+    <Disclosure as="nav" className="bg-secondary  md:px-16 z-50 relative">
         <div className="flex justify-between items-center px-4 py-4 md:py-6">
             <div className="inset-y-0 flex items-center md:hidden">
               {/* Mobile menu button*/}
@@ -73,11 +73,22 @@ function Menu() {
               >
                 {t('contact-us')}
               </DisclosureButton>
-              <DisclosureButton as="a" href={'/'}
-                className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium text-white`}
-              >
-                en
-              </DisclosureButton>
+              {i18n.language=='en'
+                ? (
+                  <DisclosureButton as="button"  onClick={()=>changeLanguage('ar')}
+                  className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium text-white`}
+                >
+                  AR
+                </DisclosureButton>
+                )
+                : (
+                  <DisclosureButton as="button"  onClick={()=>changeLanguage('en')}
+                    className={`bg-secondary hover:text-primary block rounded-md px-3 py-2 text-base font-medium text-white`}
+                  >
+                    EN
+                  </DisclosureButton>
+                )}
+              
           </div>
         </DisclosurePanel>
     </Disclosure>

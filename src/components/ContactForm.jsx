@@ -81,10 +81,15 @@ function ContactForm() {
                             onChange={(e)=>setArea(e.target.value)}
                         >
                             <option>{t("Pick Case Area")}</option>
-                            <option>Area 1</option>
-                            <option>Area 2</option>
-                            <option>Area 3</option>
-                            <option>Area 4</option>
+                            <option value={"Bankruptcy"}>{t("bankruptcy")}</option>
+                            <option value={"Commercial Arbitration"}>{t("financial-claims")}</option>
+                            <option value={"Drafting and Reviewing"}>{t("drafting-and-reviewing")}</option>
+                            <option value={"Debt Collection"}>{t("debt-collection")}</option>
+                            <option value={"Civil Cases"}>{t("civil-cases")}</option>
+                            <option value={"Legal Risk Analysis"}>{t("legal-risk-analysis")}</option>
+                            <option value={"Writing Memorandums and Regulations"}>{t("memorandums-and-regulations")}</option>
+                            <option value={"Documentation"}>{t("documentation")}</option>
+                            <option value={"Legal Consultations"}>{t("legal-consultations")}</option>
                         </select>
                     </div>
                     <textarea 
