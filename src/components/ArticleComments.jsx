@@ -17,6 +17,7 @@ function ArticleComments(props) {
         //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ex in saepe natus totam quibusdam, nobis repellat, hic iste quisquam officia veniam magnam, consectetur animi molestias earum maxime soluta laudantium?"
         // }
     ])
+    const [sent, setSent] = useState(false);
 
     const [comment, setComment] = useState();
     const [name, setName] = useState();
@@ -26,7 +27,6 @@ function ArticleComments(props) {
             const response = await axios.get(`http://54.247.72.79/api/articles/${props.article}/comments`);
             if (Array.isArray(response.data.comments)) {
               setComments(response.data.comments);
-              console.log(comments)
             } else {
               console.error('API response is not an array');
             }
@@ -36,7 +36,7 @@ function ArticleComments(props) {
         };
       
         fetchData();
-      }, []);
+      }, [sent]);
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData();
@@ -45,7 +45,7 @@ function ArticleComments(props) {
         formData.append('article_id', props.article);
         try{
             axios.post(`http://54.247.72.79/api/articles/${props.article}/comments`, formData);
-            console.log('contact sent')
+            window.location.reload();
         }catch (error){
             console.log(error)
         }
@@ -69,20 +69,22 @@ function ArticleComments(props) {
                 <ChevronDownIcon className="w-4 h-4 text-white" />
             </div> */}
             <form onSubmit={(e)=>handleSubmit(e)}>
-            <div className="flex justify-between items-center bg-[#86868b] rounded-lg p-3 gap-x-3">
+            <div className="flex justify-between items-center gap-x-3">
                 <input 
                 type="text" 
                 name="name" 
                 value={name} 
                 onChange={(e)=>setName(e.target.value)}  
-                className="bg-[#86868b] h-6 w-full text-secondary font-light placeholder:text-secondary placeholder:font-light focus-visible:border-0 focus-visible:outline-offset-0" 
+                className="p-3 bg-blue-light rounded-lg text-secondary font-light placeholder:text-secondary placeholder:font-light focus-visible:border-0 focus-visible:outline-offset-0" 
                 placeholder="your name"/>
-                <input
-                type="text" 
-                name="comment" 
-                value={comment} 
-                onChange={(e)=>setComment(e.target.value)}  className="bg-[#86868b] h-6 w-full text-secondary font-light placeholder:text-secondary placeholder:font-light focus-visible:border-0 focus-visible:outline-offset-0" placeholder="Add new Comment"/>
-                <button type="submit"><PaperAirplaneIcon className="w-6 h-6 text-secondary -rotate-45"/> </button>
+                <div className="flex w-full items-center justify-between gap-x-3 bg-blue-light rounded-lg p-3 ">
+                    <input
+                    type="text" 
+                    name="comment" 
+                    value={comment} 
+                    onChange={(e)=>setComment(e.target.value)}  className="bg-blue-light h-6 w-full text-secondary font-light placeholder:text-secondary placeholder:font-light focus-visible:border-0 focus-visible:outline-offset-0" placeholder="Add new Comment"/>
+                    <button type="submit"><PaperAirplaneIcon className="w-6 h-6 text-secondary -rotate-45"/> </button>
+                </div>
             </div>
             </form>
             

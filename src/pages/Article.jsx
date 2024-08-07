@@ -29,7 +29,7 @@ function Article() {
         };
 
         fetchData();
-      }, []);
+      }, [id]);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error loading article: {error.message}</p>;
