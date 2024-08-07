@@ -39,10 +39,10 @@ function About() {
       </div>
       <div className="px-4 mt-20">
         <div className="flex flex-wrap gap-5 justify-center">
-          <img src="/images/lawyers-1.png" className='h-64 xl:h-80' alt="" />
+          <img src="/images/lawyer-1.jpg" className='h-64 xl:h-80' alt="" />
           <img src="/images/lawyers-2.png" className='h-64 xl:h-80' alt="" />
           <img src="/images/lawyers-3.png" className='h-64 xl:h-80' alt="" />
-          <img src="/images/lawyers-4.png" className='h-64 xl:h-80' alt="" />
+          <img src="/images/lawyer-4.jpg" className='h-64 xl:h-80' alt="" />
         </div>
       </div>
     </div>

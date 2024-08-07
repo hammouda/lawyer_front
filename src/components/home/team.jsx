@@ -9,7 +9,7 @@ function Team() {
         <div className="absolute z-0 right-0 top-0">
             <img src="/images/overlay-2.png" className='w-[490px] opacity-35' alt="" />
         </div>
-        <img src="/images/team-0.png" className='w-full rounded-2xl' alt="" />
+        <img src="/images/team.jpg" className='w-full rounded-2xl' alt="" />
         <div className="mt-16 lg:pr-20">
             <div className="flex w-full justify-between items-center flex-wrap gap-y-4 md:gap-y-0">
                 <p className='text-white text-4xl font-medium'>{t("meet-our-team")}</p>

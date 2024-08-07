@@ -26,7 +26,7 @@ function Menu() {
                 <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
               </DisclosureButton>
             </div>
-            <Link to={"/"}><img src="/logo.png" className='w-12 md:w-24' alt="" /></Link>
+            <Link to={"/"}><img src="/images/logo.png" className='w-12 md:w-24' alt="" /></Link>
             <div className="hidden md:flex gap-x-10 text-sm font-semibold items-center uppercase z-50">
                 <Link to={"/"} className={`hover:text-primary ${location.pathname==='/'?'text-primary':'text-white'}`}>{t('home')}</Link>
                 <Link to={"/about"} className={`hover:text-primary ${location.pathname==='/about'?'text-primary':'text-white'}`}>{t('about-us')}</Link>
