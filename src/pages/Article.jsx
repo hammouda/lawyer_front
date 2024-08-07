@@ -17,7 +17,7 @@ function Article() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/articles/${id}`);
+            const response = await axios.get(`http://54.247.72.79/api/articles/${id}`);
            
             setArticle(response.data.article);   
             setLoading(false) 

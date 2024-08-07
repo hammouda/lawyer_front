@@ -8,7 +8,7 @@ function RelevantArticles() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get('http://127.0.0.1:8000/api/articles');
+            const response = await axios.get('http:///api/articles');
             if (Array.isArray(response.data.articles)) {
               setArticles(response.data.articles.slice(0, 3));
             } else {

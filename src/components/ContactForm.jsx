@@ -17,7 +17,7 @@ function ContactForm() {
         formData.append('message', message);
         formData.append('subject', area);
         try{
-            axios.post('http://127.0.0.1:8000/api/contact', formData);
+            axios.post('http://54.247.72.79/api/contact', formData);
             console.log('contact sent')
         }catch (error){
             console.log(error)

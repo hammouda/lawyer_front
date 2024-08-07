@@ -1,0 +1,22 @@
+:root {
+    --primary: #BF9845;
+    --primary-dark: #473B21;
+}
+
+.slick-dots li button:before {
+    opacity: 100% !important;
+    font-size: 30px !important; /* Change this value to make dots bigger */
+    color: #F2F7FC !important; /* You can also change the color if needed */
+}
+  
+.slick-dots li.slick-active button:before {
+    opacity: 100% !important;
+    font-size: 36px !important;
+    color: #BF9845 !important;
+}
+
+
+.slick-dots li {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}

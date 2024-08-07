@@ -23,7 +23,7 @@ function ArticleComments(props) {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/articles/${props.article}/comments`);
+            const response = await axios.get(`http://54.247.72.79/api/articles/${props.article}/comments`);
             if (Array.isArray(response.data.comments)) {
               setComments(response.data.comments);
               console.log(comments)
@@ -44,7 +44,7 @@ function ArticleComments(props) {
         formData.append('message', comment);
         formData.append('article_id', props.article);
         try{
-            axios.post(`http://127.0.0.1:8000/api/articles/${props.article}/comments`, formData);
+            axios.post(`http://54.247.72.79/api/articles/${props.article}/comments`, formData);
             console.log('contact sent')
         }catch (error){
             console.log(error)

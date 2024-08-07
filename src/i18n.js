@@ -104,6 +104,8 @@ const resources = {
       "Leading the way with innovative legal solutions" : "Leading the way with innovative legal solutions",
       "Testimonials": "Testimonials",
       "What Our Clients Are Saying?": "What Our Clients Are Saying?",
+      "solutions-tailored-1": "Solutions Tailored",
+      "legal-needs": "to Your Legal Needs"
     }
   },
   ar: {
@@ -207,6 +209,8 @@ const resources = {
       "Leading the way with innovative legal solutions" : "روّاد في تقديم حلول قانونية مبتكرة",
       "Testimonials": "تجارب عملائنا",
       "What Our Clients Are Saying?": "ماذا يقولون؟",
+      "solutions-tailored-1": "حلول مُصممة خصيصًا",
+      "legal-needs": "لتلبية احتياجاتك القانونية"
     }
   }
 };
