@@ -107,10 +107,10 @@ function Services() {
             </div>
         </div>
         </Link>
-        <div className={`flex flex-col justify-end ${i18n.language=='ar' ? 'lg:mr-16': 'lg:ml-16'}`}>
+        <div className={`flex flex-col justify-end ${i18n.language==='ar' ? 'lg:mr-16': 'lg:ml-16'}`}>
             <Link to={"/services"} className=''>
                 <p className='text-blue-dark font-semibold text-2xl'>{t("more-services")}</p>
-                {i18n.language=='ar'
+                {i18n.language==='ar'
                     ? (<ArrowLongLeftIcon className='w-24 h-24 text-blue-dark' />)
                     : (<ArrowLongRightIcon className='w-24 h-24 text-blue-dark' />)
                 }

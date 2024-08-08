@@ -88,38 +88,38 @@ function Vision() {
                     <p className="uppercase text-black text-lg lg:text-xl mb-2">{t("Testimonials")}</p>
                     <p className="text-black text-2xl lg:text-[40px] font-medium leading-snug">{t("What Our Clients Are Saying?")}</p>
                 </div>
-                <div className="max-w-72 lg:max-w-2xl mx-auto pt-10 pb-8 relative">
+                <div className="max-w-72 lg:max-w-2xl mx-auto pt-10 pb-8 relative testimonial">
                     <Slider {...settings}>
-                        <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
+                        <div className="item" dir={i18n.language==='en'?'ltr':'rtl'}>
                             <div className="flex flex-col gap-y-4">
                                 <p className='text-lg text-black'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iusto natus quasi iste autem ea provident quos rem quis quaerat, blanditiis non suscipit tempora unde dolorem velit fuga deserunt. Amet.
+                                    {t("testimonial-1")}
                                 </p>
                                 <div className="mb-4">
-                                    <p className='text-xl font-bold text-black'>Mahmoud</p>
-                                    <p className='text-xl text-black'>CEO, Lorem Ipsum</p>
+                                    <p className='text-xl font-bold text-black'>{t("testimonial-1-writer")}</p>
+                                    <p className='text-sm text-black'>{t("testimonial-1-pos")}</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
+                        <div className="item" dir={i18n.language==='en'?'ltr':'rtl'}>
                             <div className="flex flex-col gap-y-4">
                                 <p className='text-lg text-black'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iusto natus quasi iste autem ea provident quos rem quis quaerat, blanditiis non suscipit tempora unde dolorem velit fuga deserunt. Amet.
+                                {t("testimonial-2")}
                                 </p>
                                 <div className="mb-4">
-                                    <p className='text-xl font-bold text-black'>Mahmoud</p>
-                                    <p className='text-xl text-black'>CEO, Lorem Ipsum</p>
+                                    <p className='text-xl font-bold text-black'>{t("testimonial-2-writer")}</p>
+                                    <p className='text-sm text-black'>{t("testimonial-2-pos")}</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
+                        <div className="item" dir={i18n.language==='en'?'ltr':'rtl'}>
                             <div className="flex flex-col gap-y-4">
                                 <p className='text-lg text-black'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, iusto natus quasi iste autem ea provident quos rem quis quaerat, blanditiis non suscipit tempora unde dolorem velit fuga deserunt. Amet.
+                                {t("testimonial-3")}
                                 </p>
                                 <div className="mb-4">
-                                    <p className='text-xl font-bold text-black'>Mahmoud</p>
-                                    <p className='text-xl text-black'>CEO, Lorem Ipsum</p>
+                                    <p className='text-xl font-bold text-black'>{t("testimonial-1-writer")}</p>
+                                    <p className='text-sm text-black'>{t("testimonial-3-pos")}</p>
                                 </div>
                             </div>
                         </div>

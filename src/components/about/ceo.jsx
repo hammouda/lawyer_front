@@ -19,11 +19,14 @@ function Ceo() {
                 <p className="text-4xl font-semibold text-white">
                     {t("Meet Our CEO")}
                 </p>
-                <p className="text-lg font-light text-white text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam ab nisi, ullam, accusantium optio ad perferendis illum dolores veritatis sint sunt dolor porro autem vero unde quisquam ea. Autem.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati esse harum rem sit aut. Voluptas totam ipsam quos reiciendis minima aperiam, adipisci dolore rem dignissimos. Molestiae quos molestias iste rem?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam ab nisi, ullam, accusantium optio ad perferendis illum dolores veritatis sint sunt dolor porro autem vero unde quisquam ea. Autem.
-                </p>
+                <div>
+                    <p className="text-lg font-light text-white text-justify mb-4">
+                        {t("ceo-description")} 
+                    </p>
+                    <p className="text-lg font-light text-white text-justify">
+                        {t("ceo-description-2")}
+                    </p>
+                </div>
                 <Link to={"/services"} className='flex w-fit items-center justify-center px-6 py-4 rounded-2xl border border-gold text-white hover:bg-gold hover:text-secondary'>
                     {t("Check Our Services")}
                 </Link>

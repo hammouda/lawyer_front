@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 function App() {
   const { i18n } = useTranslation();
   return (
-    <div className="App font-roboto" dir={i18n.language=='ar'?'rtl':'ltr'}>
+    <div className="App font-roboto" dir={i18n.language==='ar'?'rtl':'ltr'}>
       <Router>
         <Routes>
           <Route path="/" element={<Home/>} />

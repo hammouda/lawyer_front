@@ -107,7 +107,22 @@ const resources = {
       "solutions-tailored-1": "Solutions Tailored",
       "legal-needs": "to Your Legal Needs",
       "Download File" : "Download File",
-      "message-success" : "Message Sent Successfully"
+      "message-success" : "Message Sent Successfully",
+      "about-description" : "Our law firm, based in Saudi Arabia, is dedicated to providing exceptional legal services. With a team of highly skilled professionals, we are committed to offering personalized solutions that meet the unique needs of our clients. Our expertise spans across various legal domains, ensuring comprehensive support and representation.",
+      "about-description-2": "At our law firm, we believe in building long-lasting relationships with our clients.",
+      "our-team-description" : "Our team consists of experienced lawyers and legal professionals who are dedicated to delivering top-notch legal services. Each member brings a wealth of knowledge and expertise, ensuring that our clients receive the best possible representation and advice.",
+      "ceo-description" : "Mr. Mustapha Ahmed, our esteemed CEO, is a distinguished lawyer with years of experience in the legal field. His leadership and vision have been instrumental in driving the success and growth of our firm. Under his guidance, we have established a reputation for excellence and integrity.",
+      "ceo-description-2": "Mr. Mustapha Ahmed is not only a leader but also a mentor to the team. His approach to law is both innovative and client-focused, ensuring that the firm stays ahead in the ever-evolving legal landscape. With numerous accolades and a deep understanding of the legal system in Saudi Arabia, Mr. Ahmed is dedicated to upholding the highest standards of legal practice.",
+      "free-consultation-desc" : "Contact us today for a free consultation and let us help you with your legal needs.",
+      "testimonial-1": "The legal team at this firm provided me with outstanding support and guidance. I highly recommend their services.",
+      "testimonial-1-writer" : "Ahmed Al-Fahad",
+      "testimonial-1-pos" : "CEO, Al-Fahad Enterprises",
+      "testimonial-2": "Professional, efficient, and trustworthy. They handled my case with utmost care and dedication.",
+      "testimonial-2-writer" : "Sara Al-Mutairi",
+      "testimonial-2-pos" : "Legal Advisor, Gulf Financial Services",
+      "testimonial-3": "I am grateful for the exceptional legal assistance I received. Their expertise and commitment are truly commendable.",
+      "testimonial-3-writer" : "Khalid Al-Harabi",
+      "testimonial-3-pos" : "General Manager, Al-Harabi Trading",
     }
   },
   ar: {
@@ -214,7 +229,22 @@ const resources = {
       "solutions-tailored-1": "حلول مُصممة خصيصًا",
       "legal-needs": "لتلبية احتياجاتك القانونية",
       "Download File" : "تحميل الملف",
-      "message-success" : "تمّ الإرسال بنجاح"
+      "message-success" : "تمّ الإرسال بنجاح",
+      "about-description" : "مكتبنا للمحاماة ملتزم بتقديم خدمات قانونية استثنائية. مع فريق من المهنيين ذوي الكفاءة العالية، نحن ملتزمون بتقديم حلول مخصصة تلبي الاحتياجات الفريدة لعملائنا. تشمل خبراتنا مجالات قانونية متعددة، مما يضمن دعماً وتمثيلاً شاملاً.",
+      "about-description-2" : "في مكتب المحاماة لدينا، نؤمن ببناء علاقات طويلة الأمد مع عملائنا. نهجنا يعتمد على فهم تعقيدات كل قضية وتقديم حلول قانونية استراتيجية مصممة خصيصاً لتلبية الاحتياجات الفردية.",
+      "our-team-description" : "فريقنا يتكون من محامين ومحترفين قانونيين ذوي خبرة ملتزمين بتقديم خدمات قانونية رفيعة المستوى. كل عضو يجلب معه ثروة من المعرفة والخبرة، مما يضمن أن عملائنا يحصلون على أفضل تمثيل ونصائح ممكنة.",
+      "ceo-description" : "السيد مصطفى أحمد، الرئيس التنفيذي المحترم لدينا، هو محامٍ بارز يتمتع بسنوات من الخبرة في المجال القانوني. لقد كان لقيادته ورؤيته دورٌ أساسي في تحقيق نجاح ونمو مكتبنا. تحت إدارته، قمنا ببناء سمعة ممتازة للنزاهة والتفوق.",
+      "ceo-description-2" : "السيد مصطفى أحمد ليس قائدًا فحسب، بل هو أيضًا مرشد للفريق. نهجه في القانون مبتكر ويركز على العملاء، مما يضمن أن المكتب يظل متقدماً في المشهد القانوني المتغير باستمرار. مع العديد من الجوائز وفهم عميق للنظام القانوني في المملكة العربية السعودية، يكرس السيد أحمد نفسه للحفاظ على أعلى معايير الممارسة القانونية.",
+      "free-consultation-desc" : "اتصل بنا اليوم للحصول على استشارة مجانية ودعنا نساعدك في احتياجاتك القانونية.",
+      "testimonial-1": "قدم لي الفريق القانوني في هذا المكتب دعمًا وتوجيهًا ممتازين. أنصح بخدماتهم بشدة",
+      "testimonial-1-writer" : "أحمد الفهد",
+      "testimonial-1-pos" : "الرئيس التنفيذي، شركات الفهد",
+      "testimonial-2": "مهنيون وفعالون ويمكن الوثوق بهم. تعاملوا مع قضيتي بأقصى درجات العناية والالتزام",
+      "testimonial-2-writer" : "سارة المطيري",
+      "testimonial-2-pos" : "مستشارة قانونية، خدمات الخليج المالية",
+      "testimonial-3": "أنا ممتن للمساعدة القانونية الاستثنائية التي تلقيتها. خبرتهم والتزامهم جديرون بالثناء حقًا",
+      "testimonial-3-writer" : "خالد الهرابي",
+      "testimonial-3-pos" : "المدير العام، تجارة الحرابي"
     }
   }
 };

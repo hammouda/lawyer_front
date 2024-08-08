@@ -24,7 +24,7 @@ function Header() {
             <div className="md:col-span-2 md:mx-32">
                 <div className="max-w-72 lg:max-w-2xl mx-auto pt-10 pb-8 relative">
                 <Slider {...settings}>
-                    <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
+                    <div className="item" dir={i18n.language==='en'?'ltr':'rtl'}>
                         <p className='text-xl lg:text-6xl font-bold text-blue-light tracking-tighter'>
                             {t("experienced-lawyers")}
                         </p>
@@ -41,7 +41,7 @@ function Header() {
                             </Link>
                         </div>
                     </div>
-                    <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
+                    <div className="item" dir={i18n.language==='en'?'ltr':'rtl'}>
                         <p className='text-xl lg:text-6xl font-bold text-primary tracking-tighter'>
                             {t("solutions-tailored-1")}
                         </p>
@@ -58,7 +58,7 @@ function Header() {
                             </Link>
                         </div>
                     </div>
-                    <div className="item" dir={i18n.language=='en'?'ltr':'rtl'}>
+                    <div className="item" dir={i18n.language==='en'?'ltr':'rtl'}>
                         <p className='text-xl lg:text-6xl font-bold text-blue-light tracking-tighter'>
                             {t("experienced-lawyers")}
                         </p>
@@ -79,7 +79,7 @@ function Header() {
                 </div>
             </div>
             <div className="col-span-1">
-                {i18n.language=='en'
+                {i18n.language==='en'
                 ? (<img src="/images/woman-bg.png" className='w-44 md:w-72' alt="" />)
                 : (<img src="/images/woman-bg-2.png" className='w-44 md:w-72' alt="" />)
                 }

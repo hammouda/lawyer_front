@@ -18,7 +18,7 @@ function Team() {
                 </Link>
             </div>
             <p className="mt-5 text-white w-full text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, et. Nobis laborum minima, enim quis sint quasi recusandae nihil quod, consequatur atque ea. Deserunt nemo itaque odio nostrum, adipisci unde.
+                {t("our-team-description")}
             </p>
             <div className="mt-11 flex flex-wrap gap-5 z-50">
                 <div className='w-fit h-72 rounded-2xl relative bg-secondary'>

@@ -1,8 +1,16 @@
-.slick-dots li button:before {
-    font-size: 21px; /* Change this value to make dots bigger */
-    color: #000; /* You can also change the color if needed */
+.testimonial .slick-dots li button:before {
+    opacity: 100% !important;
+    font-size: 24px !important; /* Change this value to make dots bigger */
+    color: #ccc !important; /* You can also change the color if needed */
 }
   
-.slick-dots li.slick-active button:before {
-    color: #000; /* Active dot color */
+.testimonial .slick-dots li.slick-active button:before {
+    opacity: 100% !important;
+    font-size: 24px !important;
+    color: #111 !important;
+}
+
+.testimonial .slick-dots li {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }

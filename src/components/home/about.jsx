@@ -26,8 +26,10 @@ function About() {
         <div className="w-full flex flex-col justify-between">
           <div className='w-full'>
             <p className='text-justify text-blue-dark text-base md:text-lg'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat natus cum iste facilis quas ducimus quam officiis, aut velit! Fuga voluptas nesciunt provident numquam minus fugiat pariatur excepturi laboriosam mollitia.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat natus cum iste facilis quas ducimus quam officiis, aut velit! Fuga voluptas nesciunt provident numquam minus fugiat pariatur excepturi laboriosam mollitia.
+              {t('about-description')}
+            </p>
+            <p className='text-justify text-blue-dark text-base md:text-lg'>
+            {t('about-description-2')}
             </p>
           </div>
           <div className="w-full flex justify-center gap-x-6 items-center mt-7 xl:mt-0">
@@ -39,10 +41,10 @@ function About() {
       </div>
       <div className="px-4 mt-20">
         <div className="flex flex-wrap gap-5 justify-center">
-          <img src="/images/lawyer-1.jpg" className='h-64 xl:h-80' alt="" />
+          <img src="/images/lawyers-1.png" className='h-64 xl:h-80' alt="" />
           <img src="/images/lawyers-2.png" className='h-64 xl:h-80' alt="" />
           <img src="/images/lawyers-3.png" className='h-64 xl:h-80' alt="" />
-          <img src="/images/lawyer-4.jpg" className='h-64 xl:h-80' alt="" />
+          <img src="/images/lawyers-4.png" className='h-64 xl:h-80' alt="" />
         </div>
       </div>
     </div>

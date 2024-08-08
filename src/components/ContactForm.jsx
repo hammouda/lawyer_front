@@ -46,7 +46,7 @@ function ContactForm() {
                     </div>
                 )}
                 <p className="text-secondary text-4xl font-medium leading-relaxed">{t("Free Consulation")}</p>
-                <p className="text-gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p className="text-gray">{t("free-consultation-desc")}</p>
                 <div className='mt-8'>
                   <form onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-5">
