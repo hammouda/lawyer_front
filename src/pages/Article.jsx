@@ -19,7 +19,7 @@ function Article() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get(`http://54.247.72.79/api/articles/${id}`);
+            const response = await axios.get(`https://admin.mithaqaltashrie.com.sa/api/articles/${id}`);
            
             setArticle(response.data.article);   
             setLoading(false) 
@@ -37,7 +37,7 @@ function Article() {
     if (error) return <p>Error loading article: {error.message}</p>;
     const download=()=>{
       const link = document.createElement('a');
-      link.href = 'http://54.247.72.79/storage/'+article.file.download_link;
+      link.href = 'https://admin.mithaqaltashrie.com.sa/storage/'+article.file.download_link;
       link.download = article.file.original_name;
       link.click();
     }

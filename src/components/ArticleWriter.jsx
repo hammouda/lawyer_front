@@ -2,7 +2,7 @@ function ArticleWriter(props) {
     return(
         <>
             <div className="w-fit h-fit relative" >
-                <img src={"http://54.247.72.79//storage/"+props.image} className="relative rounded-[20px]"/>
+                <img src={"https://admin.mithaqaltashrie.com.sa//storage/"+props.image} className="relative rounded-[20px]"/>
                 <div className="h-full w-full top-0 absolute bg-gradient-to-t from-black rounded-[20px]"></div>
             </div>
             <div className="w-100 h-[55.50px] justify-between items-start inline-flex">

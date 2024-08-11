@@ -19,7 +19,7 @@ function ContactForm() {
         formData.append('message', message);
         formData.append('subject', area);
         try{
-            axios.post('http://54.247.72.79/api/contact', formData);
+            axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
             empty();
             setShowNotif(true);
             setTimeout(() => {
