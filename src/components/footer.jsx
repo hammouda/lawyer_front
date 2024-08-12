@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 function Footer() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
   return (
     <div className='bg-secondary py-14 relative'>
         <div className="hidden lg:block absolute opacity-20 bottom-0 w-full px-4 z-0">
             <div className='flex justify-center w-2/3 mx-auto'>
-                <img src="/images/logo-1.png" className='w-44 mx-auto' alt="" />
-                <img src="/images/logo-1.png" className='w-44 mx-auto' alt="" />
+                <img src="/images/logo-1.png" className='w-44 mx-auto' alt="Mithaq Al Tashrie" />
+                <img src="/images/logo-1.png" className='w-44 mx-auto' alt="Mithaq Al Tashrie" />
             </div>
         </div>
         <div className="absolute bottom-2.5 w-full z-0">

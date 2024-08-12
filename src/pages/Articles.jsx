@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import axios from "axios";
 function Articles() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [articles, setArticles]= useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -30,7 +30,7 @@ function Articles() {
         <>
         <Menu/>
         <div className="bg-secondary w-full relative h-28 md:h-72 flex flex-col justify-center">
-            <img src="/images/overlay-5.png" className='absolute h-32 md:h-80 -bottom-4 md:-bottom-8 left-0 0 z-10' alt="" />
+            <img src="/images/overlay-5.png" className='absolute h-32 md:h-80 -bottom-4 md:-bottom-8 left-0 0 z-10' alt="Mithaq Al Tashrie" />
             <div className="relative flex md:flex-row-reverse px-4 md:px-10 lg:px-20 xl:px-36">
                 <p className="text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-extrabold text-blue-semilight">
                     {t("Stay updated to the")}  <span className="text-primary">{t("Newest")}<br/>{t("legal")}</span> {t("information")}

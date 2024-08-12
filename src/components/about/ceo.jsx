@@ -9,9 +9,9 @@ function Ceo() {
         <div className="grid md:grid-cols-3 gap-16">
             <div className="relative pt-7">
                 <div className="absolute bottom-0">
-                    {i18n.language=="en"
-                    ? (<img src="/images/woman-bg-2.png" className='mx-auto h-96' alt="" />)
-                    : (<img src="/images/woman-bg.png" className='mx-auto h-96' alt="" />)
+                    {i18n.language==="en"
+                    ? (<img src="/images/woman-bg-2.png" className='mx-auto h-96' alt="Mithaq Al Tashrie" />)
+                    : (<img src="/images/woman-bg.png" className='mx-auto h-96' alt="Mithaq Al Tashrie" />)
                     }
                 </div>
             </div>

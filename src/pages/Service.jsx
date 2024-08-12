@@ -18,7 +18,7 @@ function Service() {
             <p className="my-8 text-lg text-secondary text-justify">
                 {t("service-paragraph-1")}
             </p>
-            <img src="/images/service-img.png" className='w-full rounded-2xl' alt="" />
+            <img src="/images/service-img.png" className='w-full rounded-2xl' alt="Mithaq Al Tashrie" />
             <p className="my-8 text-lg text-secondary text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             </p>

@@ -27,9 +27,9 @@ function Menu() {
               </DisclosureButton>
             </div>
             <div className="z-50">
-            <Link to={"/"}><img src="/logo.png" className='w-10 lg:w-20' alt="" /></Link>
+            <Link to={"/"}><img src="/logo.png" className='w-10 lg:w-20' alt="Mithaq Al Tashrie" /></Link>
             </div>
-            <div className="hidden md:flex gap-x-10 text-sm font-semibold items-center uppercase z-50">
+            <div className="hidden lg:flex gap-x-10 text-sm font-semibold items-center uppercase z-50">
                 <Link to={"/"} className={`hover:text-primary ${location.pathname==='/'?'text-primary':'text-white'}`}>{t('home')}</Link>
                 <Link to={"/about"} className={`hover:text-primary ${location.pathname==='/about'?'text-primary':'text-white'}`}>{t('about-us')}</Link>
                 <Link to={"/services"} className={`hover:text-primary ${location.pathname.startsWith('/services')?'text-primary':'text-white'}`}>{t('our-services')}</Link>

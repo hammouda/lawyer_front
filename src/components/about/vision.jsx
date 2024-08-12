@@ -76,12 +76,12 @@ function Vision() {
                 </div>
             </div>
             <div>
-                <img src="/images/vision-team.png" alt="" className='w-full lg:h-96 rounded-2xl' />
+                <img src="/images/vision-team.png" alt="Mithaq Al Tashrie" className='w-full lg:h-96 rounded-2xl' />
             </div>
         </div>
         <div className="bg-blue-light px-8 md:px-20 py-10 relative">
             <div className="absolute bottom-0">
-                <img src="/images/overlay-4.png" className='opacity-60' alt="" />
+                <img src="/images/overlay-4.png" className='opacity-60' alt="Mithaq Al Tashrie" />
             </div>
             <div className="flex flex-wrap lg:flex-nowrap gap-4 lg:gap-20">
                 <div className='max-w-72 md:max-w-xs'>
@@ -134,10 +134,10 @@ function Vision() {
         </div>
         <div className="bg-white pt-5 pb-12 px-8 md:px-20">
             <div className="flex flex-wrap justify-between items-center gap-y-4">
-                <img src="/images/brand-1.png" className='max-w-52' alt="" />
-                <img src="/images/brand-2.png" className='max-w-52' alt="" />
-                <img src="/images/brand-3.png" className='max-w-52' alt="" />
-                <img src="/images/brand-4.png" className='max-w-52' alt="" />
+                <img src="/images/brand-1.png" className='max-w-52' alt="Mithaq Al Tashrie" />
+                <img src="/images/brand-2.png" className='max-w-52' alt="Mithaq Al Tashrie" />
+                <img src="/images/brand-3.png" className='max-w-52' alt="Mithaq Al Tashrie" />
+                <img src="/images/brand-4.png" className='max-w-52' alt="Mithaq Al Tashrie" />
             </div>
         </div>
     </div>

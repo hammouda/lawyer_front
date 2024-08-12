@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom'
 
 function About() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className='bg-blue-light py-16 relative'>
       <div className="hidden md:block absolute right-0 top-0 z-10">
-        <img src="/images/overlay.png" className='w-80' alt="" />
+        <img src="/images/overlay.png" className='w-80' alt="Mithaq Al Tashrie" />
       </div>
       <div className=" relative z-50 flex px-4 md:px-16 justify-between flex-wrap">
         <p className="text-xl lg:text-4xl text-blue-dark font-semibold mb-4 md:mb-0">
@@ -33,18 +33,18 @@ function About() {
             </p>
           </div>
           <div className="w-full flex justify-center gap-x-6 items-center mt-7 xl:mt-0">
-            <img src="/images/winner.png" className='w-16 lg:w-32' alt="" />
-            <img src="/images/award-winner.png" className='w-16 lg:w-32' alt="" />
-            <img src="/images/winner.png" className='w-16 lg:w-32' alt="" />
+            <img src="/images/winner.png" className='w-16 lg:w-32' alt="Mithaq Al Tashrie" />
+            <img src="/images/award-winner.png" className='w-16 lg:w-32' alt="Mithaq Al Tashrie" />
+            <img src="/images/winner.png" className='w-16 lg:w-32' alt="Mithaq Al Tashrie" />
           </div>
         </div>
       </div>
       <div className="px-4 mt-20">
         <div className="flex flex-wrap gap-5 justify-center">
-          <img src="/images/lawyers-1.png" className='h-64 xl:h-80' alt="" />
-          <img src="/images/lawyers-2.png" className='h-64 xl:h-80' alt="" />
-          <img src="/images/lawyers-3.png" className='h-64 xl:h-80' alt="" />
-          <img src="/images/lawyers-4.png" className='h-64 xl:h-80' alt="" />
+          <img src="/images/lawyers-1.png" className='h-64 xl:h-80' alt="Mithaq Al Tashrie" />
+          <img src="/images/lawyers-2.png" className='h-64 xl:h-80' alt="Mithaq Al Tashrie" />
+          <img src="/images/lawyers-3.png" className='h-64 xl:h-80' alt="Mithaq Al Tashrie" />
+          <img src="/images/lawyers-4.png" className='h-64 xl:h-80' alt="Mithaq Al Tashrie" />
         </div>
       </div>
     </div>

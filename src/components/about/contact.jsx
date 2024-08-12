@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 
@@ -74,7 +74,7 @@ function Contact() {
   return (
     <div className='bg-secondary px-4 lg:px-36 py-16 relative'>
         <div className="absolute bottom-0 right-0">
-            <img src="/images/overlay-3.png" className='opacity-70' alt="" />
+            <img src="/images/overlay-3.png" className='opacity-70' alt="Mithaq Al Tashrie" />
         </div>
         <div className="relative grid md:grid-cols-2 gap-16 z-50">
             <div>
@@ -154,21 +154,21 @@ function Contact() {
             </div>
             <div className='m-auto'>
                 <div className="flex items-center gap-x-5">
-                    <img src="/images/icon-address-white.png" className='w-12' alt="" />
+                    <img src="/images/icon-address-white.png" className='w-12' alt="Mithaq Al Tashrie" />
                     <div className='flex flex-col h-full justify-between text-white'>
                         <p dir='ltr'>(+966) 0000 0000 0</p>
                         <p>contact@gmail.com</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-x-5 mt-16">
-                    <img src="/images/icon-map-white.png" className='w-12' alt="" />
+                    <img src="/images/icon-map-white.png" className='w-12' alt="Mithaq Al Tashrie" />
                     <div className='flex flex-col h-full justify-between text-white'>
                         <p>{t('st-name')}</p>
                         <p>{t('eriadh-ksa')}</p>
                     </div>
                 </div>
                 <div className="flex items-center gap-x-5 mt-16">
-                    <img src="/images/icon-time-white.png" className='w-12' alt="" />
+                    <img src="/images/icon-time-white.png" className='w-12' alt="Mithaq Al Tashrie" />
                     <div className='flex flex-col h-full justify-between text-white'>
                         <p>{t("mon-fri")} 08:00 - 17:00 KSA</p>
                         <p>({t("closed-holiday")})</p>

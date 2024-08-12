@@ -80,8 +80,8 @@ function Header() {
             </div>
             <div className="col-span-1">
                 {i18n.language==='en'
-                ? (<img src="/images/woman-bg.png" className='w-44 md:w-72' alt="" />)
-                : (<img src="/images/woman-bg-2.png" className='w-44 md:w-72' alt="" />)
+                ? (<img src="/images/woman-bg.png" className='w-44 md:w-72' alt="Mithaq Al Tashrie" />)
+                : (<img src="/images/woman-bg-2.png" className='w-44 md:w-72' alt="Mithaq Al Tashrie" />)
                 }
                 
             </div>

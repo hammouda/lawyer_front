@@ -65,7 +65,7 @@ function Header() {
             </div>
         </div>
         <div className="absolute top-6 right-0 opacity-60">
-            <img src="/images/overlay-2.png" className='w-64 lg:w-[420px]' alt="" />
+            <img src="/images/overlay-2.png" className='w-64 lg:w-[420px]' alt="Mithaq Al Tashrie" />
         </div>
     </div>
   )
