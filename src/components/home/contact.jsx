@@ -22,6 +22,10 @@ function Contact() {
             }
             return true
         }
+        if(!name.trim()){
+            errors["name"]= "name error"
+            isValid= false
+        }
         if(!message.trim()){
             errors["message"]= "message error"
             isValid= false
@@ -44,11 +48,12 @@ function Contact() {
         formData.append('email', email);
         formData.append('message', message);
         formData.append('subject', area);
-        if(validate){
+        if(validate(formData)){
         try{
             axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
             empty();
             setShowNotif(true);
+            setErrors({});
             setTimeout(() => {
                 setShowNotif(false)
             }, 3000);
@@ -71,8 +76,8 @@ function Contact() {
         <div className="grid md:grid-cols-2 gap-16 relative z-50">
             <div>
                 {showNotif && (
-                    <div className='w-full px-6 py-2 bg-primary-lighter shadow-lg rounded-lg mb-4'>
-                        <p className='text-lg font-medium text-secondary'>{t("message-success")}</p>
+                    <div className='w-full px-6 py-2 bg-green-light shadow-lg rounded-lg mb-4'>
+                        <p className='text-lg font-medium text-green'>{t("message-success")}</p>
                     </div>
                 )}
                 <p className="text-secondary text-4xl font-medium leading-relaxed">{t("free-consulation")}</p>
@@ -80,34 +85,41 @@ function Contact() {
                 <div className='mt-8'>
                   <form onSubmit={handleSubmit}> 
                     <div className="grid md:grid-cols-2 gap-5">
-                        <input 
-                            id="name"
-                            name='name'
-                            type="text" placeholder={t('name')}
-                            className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <input 
-                            id="email"
-                            name="email"
-                            type="email" placeholder={t('email')}
-                            className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        {errors.email && <span className="text-primary text-xs italic">{t(errors.email)}</span>}
-                        <input 
-                            id="phone"
-                            name="phone"
-                            type="text" placeholder={t('phone')}
-                            className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
-                            value={phone}
-                            onChange={(e)=>setPhone(e.target.value)}
-                        />
-                        {errors.phone && <span className="text-primary text-xs italic">{t(errors.phone)}</span>}
+                        <div>
+                            <input 
+                                id="name"
+                                name='name'
+                                type="text" placeholder={t('name')}
+                                className='bg-primary-lighter h-fit border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            {errors.name && <span className="text-red text-xs italic">{t(errors.name)}</span>}
+                        </div>
+                        <div>
+                            <input 
+                                id="email"
+                                name="email"
+                                type="email" placeholder={t('email')}
+                                className='bg-primary-lighter h-fit border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            {errors.email && <span className="text-red text-xs italic">{t(errors.email)}</span>}
+                        </div>
+                        <div>
+                            <input 
+                                id="phone"
+                                name="phone"
+                                type="text" placeholder={t('phone')}
+                                className='bg-primary-lighter h-fit border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                                value={phone}
+                                onChange={(e)=>setPhone(e.target.value)}
+                            />
+                            {errors.phone && <span className="text-red text-xs italic">{t(errors.phone)}</span>}
+                        </div>
                         <select 
-                            className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 ' 
+                            className='bg-primary-lighter h-fit border border-primary-dark rounded-full w-full px-5 py-2.5 ' 
                             id="area"
                             name="area"
                             onChange={(e)=>setArea(e.target.value)}
@@ -124,15 +136,17 @@ function Contact() {
                             <option value={"Legal Consultations"}>{t("legal-consultations")}</option>
                         </select>
                     </div>
-                    <textarea 
-                        id="message"
-                        name="message"
-                        placeholder={t('case-description')} rows={4}
-                        className='mt-5 bg-primary-lighter border border-primary-dark rounded-3xl w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
-                        value={message}
-                        onChange={(e)=>setMessage(e.target.value)} 
-                    ></textarea>
-                        {errors.message && <span className="text-primary text-xs italic">{t(errors.message)}</span>}
+                    <div>
+                        <textarea 
+                            id="message"
+                            name="message"
+                            placeholder={t('case-description')} rows={4}
+                            className='mt-5 bg-primary-lighter border border-primary-dark rounded-3xl w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
+                            value={message}
+                            onChange={(e)=>setMessage(e.target.value)} 
+                        ></textarea>
+                        {errors.message && <span className="text-red text-xs italic">{t(errors.message)}</span>}
+                    </div>
                     <input type="submit" value={t("send")} className='mt-5 bg-primary-lighter border border-primary-dark rounded-full px-8 py-2 cursor-pointer hover:bg-primary-dark hover:text-white' />
                   </form>
                 </div>

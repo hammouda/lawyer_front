@@ -17,7 +17,11 @@ module.exports = {
       'gold-light': '#DECA9E',
       'white': '#FFFFFF',
       'gray': '#555',
-      'black': '#000'
+      'black': '#000',
+      'red-light': '#f87171',
+      'red': '#b91c1c',
+      'green-light': '#f0fdf4',
+      'green': '#15803d'
     },
     extend: {
       fontFamily: {

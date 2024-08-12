@@ -22,6 +22,10 @@ function Contact() {
             }
             return true
         }
+        if(!name.trim()){
+            errors["name"]= "name error"
+            isValid= false
+        }
         if(!message.trim()){
             errors["message"]= "message error"
             isValid= false
@@ -39,18 +43,17 @@ function Contact() {
 
     const handleSubmit =async (e) => {
         e.preventDefault();
-        console.log("sending")
-        // Use FormData to handle file uploads
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
         formData.append('message', message);
         formData.append('subject', area);
-        if(validate){
+        if(validate(formData)){
             try{
                 axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
                 empty();
                 setShowNotif(true);
+                setErrors({});
                 setTimeout(() => {
                     setShowNotif(false)
                 }, 3000);
@@ -58,14 +61,16 @@ function Contact() {
                 console.log(error)
             }
         }
-        const empty = () => {
-            setName("");
-            setEmail("");
-            setArea("");
-            setMessage("");
-            setPhone("");
-        }
     };
+
+    const empty = () => {
+        setName("");
+        setEmail("");
+        setArea("");
+        setMessage("");
+        setPhone("");
+    }
+
   return (
     <div className='bg-secondary px-4 lg:px-36 py-16 relative'>
         <div className="absolute bottom-0 right-0">
@@ -74,8 +79,8 @@ function Contact() {
         <div className="relative grid md:grid-cols-2 gap-16 z-50">
             <div>
                 {showNotif && (
-                    <div className='w-full px-6 py-2 bg-primary-lighter shadow-lg rounded-lg mb-4'>
-                        <p className='text-lg font-medium text-secondary'>{t("message-success")}</p>
+                    <div className='w-full px-6 py-2 bg-green-light shadow-lg rounded-lg mb-4'>
+                        <p className='text-lg font-medium text-green'>{t("message-success")}</p>
                     </div>
                 )}
                 <p className="text-white text-4xl font-medium leading-relaxed">{t("free-consulation")}</p>
@@ -83,32 +88,41 @@ function Contact() {
                 <div className='mt-8'>
                   <form onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-5 text-white">
-                        <input 
-                            id="name"
-                            name='name'
-                            type="text" placeholder={t('name')}
-                            className='bg-secondary border border-gray rounded-full w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <input 
-                            id="email"
-                            name="email"
-                            type="email" placeholder={t('email')}
-                            className='bg-secondary border border-gray rounded-full w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <input 
-                            id="phone"
-                            name="phone"
-                            type="text" placeholder={t('phone')}
-                            className='bg-secondary border border-gray rounded-full w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
-                            value={phone}
-                            onChange={(e)=>setPhone(e.target.value)}
-                        />
+                        <div>
+                            <input 
+                                id="name"
+                                name='name'
+                                type="text" placeholder={t('name')}
+                                className='bg-secondary h-fit border border-gray rounded-full w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            {errors.name && <span className="text-red text-xs italic">{t(errors.name)}</span>}
+                        </div>
+                        <div>
+                            <input 
+                                id="email"
+                                name="email"
+                                type="email" placeholder={t('email')}
+                                className='bg-secondary h-fit border border-gray rounded-full w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            {errors.email && <span className="text-red text-xs italic">{t(errors.email)}</span>}
+                        </div>
+                        <div>
+                            <input 
+                                id="phone"
+                                name="phone"
+                                type="text" placeholder={t('phone')}
+                                className='bg-secondary h-fit border border-gray rounded-full w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
+                                value={phone}
+                                onChange={(e)=>setPhone(e.target.value)}
+                            />
+                            {errors.phone && <span className="text-red text-xs italic">{t(errors.phone)}</span>}
+                        </div>
                         <select 
-                            className='bg-secondary border border-gray text-white rounded-full w-full px-5 py-2 ' 
+                            className='bg-secondary h-fit border border-gray text-white rounded-full w-full px-5 py-2.5 ' 
                             id="area"
                             name="area"
                             onChange={(e)=>setArea(e.target.value)}
@@ -125,12 +139,15 @@ function Contact() {
                             <option value={"Legal Consultations"}>{t("legal-consultations")}</option>
                         </select>
                     </div>
-                    <textarea 
-                        placeholder={t('case-description')} rows={4}
-                        className='mt-5 bg-secondary text-white border border-gray rounded-3xl w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
-                        value={message}
-                        onChange={(e)=>setMessage(e.target.value)} 
-                    ></textarea>
+                    <div>
+                        <textarea 
+                            placeholder={t('case-description')} rows={4}
+                            className='mt-5 bg-secondary text-white border border-gray rounded-3xl w-full px-5 py-2 placeholder:text-white placeholder:font-light' 
+                            value={message}
+                            onChange={(e)=>setMessage(e.target.value)} 
+                        ></textarea>
+                        {errors.message && <span className="text-red text-xs italic">{t(errors.message)}</span>}
+                    </div>
                     <input type="submit" value={t("send")} className='mt-5 bg-secondary text-white border border-white rounded-full px-8 py-2 cursor-pointer hover:bg-white hover:text-secondary' />
                   </form>
                 </div>
