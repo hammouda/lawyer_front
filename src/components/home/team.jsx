@@ -10,7 +10,7 @@ function Team() {
             <img src="/images/overlay-2.png" className='w-[490px] opacity-35' alt="" />
         </div>
         <img src="/images/team.jpg" className='w-full rounded-2xl' alt="" />
-        <div className="mt-16 lg:pr-20">
+        <div className="mt-16 md:mt-0 lg:pr-20 flex flex-col justify-center gap-y-4">
             <div className="flex w-full justify-between items-center flex-wrap gap-y-4 md:gap-y-0">
                 <p className='text-white text-4xl font-medium'>{t("meet-our-team")}</p>
                 <Link to={"/"} className='rounded-full border border-white px-7 py-3 text-center text-lg font-bold text-white'>
@@ -21,8 +21,8 @@ function Team() {
                 {t("our-team-description")}
             </p>
             <div className="mt-11 flex flex-wrap gap-5 z-50">
-                <div className='w-fit h-72 rounded-2xl relative bg-secondary'>
-                    <img src="/images/team-1.png" className='h-72 rounded-2xl opacity-70' alt="" />
+                <div className='w-fit h-56 xl:h-72 rounded-2xl relative bg-secondary'>
+                    <img src="/images/team-1.png" className='h-56 xl:h-72 rounded-2xl opacity-70' alt="" />
                     <div className="absolute bottom-2 w-full">
                         <div className="relative text-center">
                             <div className="flex justify-center items-center gap-x-2">
@@ -42,8 +42,8 @@ function Team() {
                         </div>
                     </div>
                 </div>
-                <div className='w-fit h-72 rounded-2xl relative bg-secondary'>
-                    <img src="/images/team-1.png" className='h-72 rounded-2xl opacity-70' alt="" />
+                <div className='w-fit h-56 xl:h-72 rounded-2xl relative bg-secondary'>
+                    <img src="/images/team-1.png" className='h-56 xl:h-72 rounded-2xl opacity-70' alt="" />
                     <div className="absolute bottom-2 w-full">
                         <div className="relative text-center">
                             <div className="flex justify-center text-center gap-x-2">
