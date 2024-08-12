@@ -17,7 +17,7 @@ function Services() {
             <Link to="/contact"><p className='text-sm'>{t("schedule-free-consultation")}</p></Link>
         </button>
       </div>
-      <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24 justify-center md:justify-start">
+      <div className="flex flex-wrap gap-x-4 gap-y-9 mt-24 justify-center md:justify-between">
         <Link to={"/services/1"}>
         <div className="rounded-2xl bg-gradient-to-b from-gold to-primary-light p-2 w-72 flex flex-col justify-center">
             <img src="/images/services/service-0.jpg" className='h-52 rounded-2xl' alt="" />
