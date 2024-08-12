@@ -3,33 +3,58 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 function ContactForm() {
     const { t, i18n } = useTranslation();
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [phone, setPhone] = useState();
-    const [message, setMessage] = useState();
-    const [area, setArea] = useState();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+    const [area, setArea] = useState("");
     const [showNotif, setShowNotif] = useState(false);
-
+    const [errors, setErrors] = useState({});
+    const validate =()=>{
+        let isValid =true;
+        let errors = {}
+        let isNumeric =(numbers)=>{
+            for (let i = 0; i < numbers.length; i++) {
+                if(isNaN(numbers.charAt(i))){
+                    return false
+                }                
+            }
+            return true
+        }
+        if(!message.trim()){
+            errors["message"]= "message error"
+            isValid= false
+        }
+        if(!email.trim()){
+            errors["email"]= "email error"
+            isValid= false
+        }
+        if(!isNumeric(phone.trim()) || phone.length!==9){
+            errors["phone"]= "phone error"
+        }
+        setErrors(errors)
+        return isValid
+    }
     const handleSubmit =async (e) => {
         e.preventDefault();
-        // Use FormData to handle file uploads
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
         formData.append('message', message);
         formData.append('subject', area);
-        try{
-            axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
-            empty();
-            setShowNotif(true);
-            setTimeout(() => {
-                setShowNotif(false)
-            }, 3000);
-        }catch (error){
-            console.log(error)
+        if(validate(formData)){
+            try{
+                axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
+                empty();
+                setShowNotif(true);
+                setTimeout(() => {
+                    setShowNotif(false)
+                }, 3000);
+            }catch (error){
+                console.log(error)
+            }
         }
-
-    };
+ };
 
     const empty = () => {
         setName("");
@@ -58,6 +83,7 @@ function ContactForm() {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
+                        
                         <input 
                             id="email"
                             name="email"
@@ -66,14 +92,17 @@ function ContactForm() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        {errors.email && <span className="text-primary text-xs italic">{t(errors.email)}</span>}
                         <input 
                             id="phone"
                             name="phone"
-                            type="text" placeholder={t("Phone")}
+                            type="tel" placeholder={t("Phone")}
                             className='bg-white border border-primary-dark rounded-full w-full px-5 py-2 placeholder:text-secondary placeholder:font-light' 
                             value={phone}
                             onChange={(e)=>setPhone(e.target.value)}
                         />
+                        {errors.phone && <span className="text-primary text-xs italic">{t(errors.phone)}</span>}
+
                         <select 
                             id="area"
                             name="area"
@@ -100,6 +129,7 @@ function ContactForm() {
                         value={message}
                         onChange={(e)=>setMessage(e.target.value)} 
                     ></textarea>
+                    {errors.message && <span className="text-primary text-xs italic">{t(errors.message)}</span>}
                     <input type="submit" value={t("Send")} className='mt-5 bg-white border border-primary-dark rounded-full px-8 py-2 cursor-pointer hover:bg-secondary hover:border-secondary hover:text-white' />
                   </form>
                 </div>

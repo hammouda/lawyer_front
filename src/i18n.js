@@ -123,6 +123,9 @@ const resources = {
       "testimonial-3": "I am grateful for the exceptional legal assistance I received. Their expertise and commitment are truly commendable.",
       "testimonial-3-writer" : "Khalid Al-Harabi",
       "testimonial-3-pos" : "General Manager, Al-Harabi Trading",
+      "message error":"message can not be empty",
+      "email error":"email can not be empty",
+      "phone error": "phone number must be valid"
     }
   },
   ar: {
@@ -244,7 +247,10 @@ const resources = {
       "testimonial-2-pos" : "مستشارة قانونية، خدمات الخليج المالية",
       "testimonial-3": "أنا ممتن للمساعدة القانونية الاستثنائية التي تلقيتها. خبرتهم والتزامهم جديرون بالثناء حقًا",
       "testimonial-3-writer" : "خالد الهرابي",
-      "testimonial-3-pos" : "المدير العام، تجارة الحرابي"
+      "testimonial-3-pos" : "المدير العام، تجارة الحرابي",
+      "message error":"الرسالة لا يمكن أن تكون فارغة",
+      "email error":"البريد الإلكتروني لا يمكن أن يكون فارغا",
+      "phone error": "الرجاء إعطاء رقم هاتف صحيح"
     }
   }
 };

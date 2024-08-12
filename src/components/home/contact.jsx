@@ -4,13 +4,38 @@ import { useTranslation } from 'react-i18next';
 
 function Contact() {
     const {t} = useTranslation();
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [phone, setPhone] = useState();
-    const [message, setMessage] = useState();
-    const [area, setArea] = useState();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+    const [area, setArea] = useState("");
+    const [errors, setErrors] = useState({});
     const [showNotif, setShowNotif] = useState(false);
-
+    const validate =()=>{
+        let isValid =true;
+        let errors = {}
+        let isNumeric =(numbers)=>{
+            for (let i = 0; i < numbers.length; i++) {
+                if(isNaN(numbers.charAt(i))){
+                    return false
+                }                
+            }
+            return true
+        }
+        if(!message.trim()){
+            errors["message"]= "message error"
+            isValid= false
+        }
+        if(!email.trim()){
+            errors["email"]= "email error"
+            isValid= false
+        }
+        if(!isNumeric(phone.trim()) || phone.length!==9){
+            errors["phone"]= "phone error"
+        }
+        setErrors(errors)
+        return isValid
+    }
     const handleSubmit =async (e) => {
         e.preventDefault();
         // Use FormData to handle file uploads
@@ -19,6 +44,7 @@ function Contact() {
         formData.append('email', email);
         formData.append('message', message);
         formData.append('subject', area);
+        if(validate){
         try{
             axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
             empty();
@@ -28,7 +54,7 @@ function Contact() {
             }, 3000);
         }catch (error){
             console.log(error)
-        }
+        }}
     };
     const empty = () => {
         setName("");
@@ -70,6 +96,7 @@ function Contact() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
+                        {errors.email && <span className="text-primary text-xs italic">{t(errors.email)}</span>}
                         <input 
                             id="phone"
                             name="phone"
@@ -78,6 +105,7 @@ function Contact() {
                             value={phone}
                             onChange={(e)=>setPhone(e.target.value)}
                         />
+                        {errors.phone && <span className="text-primary text-xs italic">{t(errors.phone)}</span>}
                         <select 
                             className='bg-primary-lighter border border-primary-dark rounded-full w-full px-5 py-2 ' 
                             id="area"
@@ -104,6 +132,7 @@ function Contact() {
                         value={message}
                         onChange={(e)=>setMessage(e.target.value)} 
                     ></textarea>
+                        {errors.message && <span className="text-primary text-xs italic">{t(errors.message)}</span>}
                     <input type="submit" value={t("send")} className='mt-5 bg-primary-lighter border border-primary-dark rounded-full px-8 py-2 cursor-pointer hover:bg-primary-dark hover:text-white' />
                   </form>
                 </div>

@@ -4,12 +4,38 @@ import { useTranslation } from 'react-i18next';
 
 function Contact() {
     const {t} = useTranslation();
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [phone, setPhone] = useState();
-    const [message, setMessage] = useState();
-    const [area, setArea] = useState();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [message, setMessage] = useState("");
+    const [area, setArea] = useState("");
     const [showNotif, setShowNotif] = useState(false);
+    const [errors, setErrors] = useState({});
+    const validate =()=>{
+        let isValid =true;
+        let errors = {}
+        let isNumeric =(numbers)=>{
+            for (let i = 0; i < numbers.length; i++) {
+                if(isNaN(numbers.charAt(i))){
+                    return false
+                }                
+            }
+            return true
+        }
+        if(!message.trim()){
+            errors["message"]= "message error"
+            isValid= false
+        }
+        if(!email.trim()){
+            errors["email"]= "email error"
+            isValid= false
+        }
+        if(!isNumeric(phone.trim()) || phone.length!==9){
+            errors["phone"]= "phone error"
+        }
+        setErrors(errors)
+        return isValid
+    }
 
     const handleSubmit =async (e) => {
         e.preventDefault();
@@ -20,17 +46,18 @@ function Contact() {
         formData.append('email', email);
         formData.append('message', message);
         formData.append('subject', area);
-        try{
-            axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
-            empty();
-            setShowNotif(true);
-            setTimeout(() => {
-                setShowNotif(false)
-            }, 3000);
-        }catch (error){
-            console.log(error)
+        if(validate){
+            try{
+                axios.post('https://admin.mithaqaltashrie.com.sa/api/contact', formData);
+                empty();
+                setShowNotif(true);
+                setTimeout(() => {
+                    setShowNotif(false)
+                }, 3000);
+            }catch (error){
+                console.log(error)
+            }
         }
-
         const empty = () => {
             setName("");
             setEmail("");
